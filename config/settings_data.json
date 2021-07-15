@@ -1,1 +1,87 @@
-{}
+{
+  "current": {
+    "colors_accent_1": "#222222",
+    "colors_accent_2": "#229a64",
+    "colors_text": "#222222",
+    "colors_outline_button_labels": "#222222",
+    "colors_background_2": "#f9f9f9",
+    "social_twitter_link": "tttt",
+    "social_facebook_link": "tttt",
+    "social_pinterest_link": "",
+    "social_instagram_link": "tttt",
+    "social_tiktok_link": "tt",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "tt",
+    "social_vimeo_link": "",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Free shipping on orders + 250. Learn more",
+              "color_scheme": "background-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_width": 100,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "",
+              "menu": "footer"
+            }
+          },
+          "0eb3e9c3-5baf-467e-9845-ec594a961108": {
+            "type": "link_list",
+            "settings": {
+              "heading": "",
+              "menu": "footer-menu-2"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "0eb3e9c3-5baf-467e-9845-ec594a961108"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "footer_background": "#222222",
+          "newsletter_enable": true,
+          "newsletter_heading": "Sign up to our emails",
+          "show_social": true,
+          "social_heading": "Join us online",
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true,
+          "copyright": "Copyright",
+          "bottom_links": "bottom-link"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}
