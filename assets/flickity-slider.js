@@ -2,7 +2,9 @@ class FlickityComponent extends HTMLElement {
   constructor() {
     super();
     this.slider = this.querySelector('[data-slider]');
-    this.init();
+    if (this.slider) {
+      this.init();
+    }
   }
 
   init() {

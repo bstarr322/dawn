@@ -45,6 +45,10 @@
   }
 }
 
+.collection-list {
+  list-style: none;
+}
+
 .collection-list__item:only-child {
   max-width: 100%;
   width: 100%;
