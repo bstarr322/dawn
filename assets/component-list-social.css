@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  gap: 1.6rem;
 }
 
 @media only screen and (max-width: 749px) {
@@ -16,9 +17,14 @@
 }
 
 .list-social__link {
-  align-items: center;
   display: flex;
-  padding: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-subdued);
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
 }
 
 .list-social__link:hover .icon {

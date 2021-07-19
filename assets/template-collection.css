@@ -3,7 +3,7 @@
 }
 
 .collection .grid:after {
-  /* disable Flickity for large devices */
+  /* disable Flickity */
   content: '';
 }
 

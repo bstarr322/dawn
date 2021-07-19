@@ -1,3 +1,12 @@
+.collection-list {
+  list-style: none;
+}
+
+.collection-list:after {
+  /* disable Flickity */
+  content: '';
+}
+
 @media screen and (max-width: 749px) {
   .collage-section + .collection-list-section .no-heading.no-mobile-link {
     margin-top: -7rem;
@@ -43,10 +52,12 @@
   .collection-list-wrapper.no-heading {
     margin-top: 6rem;
   }
-}
 
-.collection-list {
-  list-style: none;
+  .collection-list:after {
+    /* enable Flickity by default */
+    content: 'flickity';
+    display: none; /* hide :after */
+  }
 }
 
 .collection-list__item:only-child {
