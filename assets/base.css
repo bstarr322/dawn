@@ -1877,10 +1877,15 @@ input[type='checkbox'] {
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
+  /* margin-right: -1.2rem; */
 }
 
 @media screen and (max-width: 989px) {
+  .header__icon {
+    height: 3.4rem;
+    width: 3.4rem;
+  }
+  
   menu-drawer ~ .header__icons .header__icon--account {
     display: none;
   }
