@@ -310,7 +310,7 @@ h5,
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: 0.06rem;
-  color: rgb(var(--color-foreground));
+  color: var(--color-foreground);
   line-height: 1.3;
 }
 
@@ -477,7 +477,7 @@ blockquote {
 }
 
 .color-foreground {
-  color: rgb(var(--color-foreground));
+  color: var(--color-foreground);
 }
 
 table:not([class]) {
@@ -569,7 +569,7 @@ h6:empty {
   box-shadow: none;
   text-decoration: underline;
   text-underline-offset: 0.3rem;
-  color: rgb(var(--color-link));
+  color: var(--color-link);
   background-color: transparent;
   font-family: var(--font-heading-family);
   font-size: 1.2rem;
@@ -579,7 +579,7 @@ h6:empty {
 }
 
 .link--text {
-  color: rgb(var(--color-foreground));
+  color: var(--color-foreground);
 }
 
 .link--text:hover {
@@ -668,7 +668,7 @@ details > * {
 }
 
 .underlined-link:hover {
-  color: rgb(var(--color-link));
+  color: var(--color-link);
   text-decoration-thickness: 0.2rem;
 }
 
@@ -733,7 +733,7 @@ summary::-webkit-details-marker {
 *:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem var(--color-background),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -741,7 +741,7 @@ summary::-webkit-details-marker {
 *:focus {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem var(--color-background),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -859,7 +859,7 @@ summary::-webkit-details-marker {
 }
 
 .title-wrapper-with-link a {
-  color: rgb(var(--color-link));
+  color: var(--color-link);
   margin-top: 0;
   flex-shrink: 0;
 }
@@ -1155,13 +1155,13 @@ deferred-media {
 
 .button:focus-visible {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border)),
-    0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0 0.3rem var(--color-background),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button:focus {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border)),
-    0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0 0.3rem var(--color-background),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -1206,7 +1206,7 @@ deferred-media {
 .button.loading:after {
   animation: loading var(--duration-long) infinite linear;
   border: 0.5rem solid rgba(var(--color-button-text), 0.4);
-  border-left: 0.5rem solid rgb(var(--color-button-text));
+  border-left: 0.5rem solid var(--color-button-text);
   border-radius: 100%;
   box-sizing: content-box;
   content: '';
@@ -1238,7 +1238,7 @@ deferred-media {
 
 .share-button__fallback {
   border: 0.1rem solid rgba(var(--color-foreground), 0.1);
-  background: rgb(var(--color-background));
+  background: var(--color-background);
   padding: 2rem;
   position: absolute;
   top: 4rem;
@@ -1275,7 +1275,7 @@ deferred-media {
   background-color: transparent;
   border: 0;
   border-radius: 0;
-  color: rgb(var(--color-foreground));
+  color: var(--color-foreground);
   font-size: 1.6rem;
   width: 100%;
   box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55);
@@ -1304,7 +1304,7 @@ deferred-media {
 .select__select:focus-visible,
 .field input:focus-visible {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55),
-    0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0 0.3rem var(--color-background),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -1312,7 +1312,7 @@ deferred-media {
 .select__select:focus,
 .field input:focus {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55),
-    0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0 0.3rem var(--color-background),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -1546,7 +1546,7 @@ input[type='checkbox'] {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(var(--color-foreground));
+  color: var(--color-foreground);
 }
 
 .quantity__button svg {
@@ -1557,8 +1557,8 @@ input[type='checkbox'] {
 .quantity__input:-webkit-autofill,
 .quantity__input:-webkit-autofill:hover,
 .quantity__input:-webkit-autofill:active {
-  box-shadow: 0 0 0 10rem rgb(var(--color-background)) inset !important;
-  -webkit-box-shadow: 0 0 0 10rem rgb(var(--color-background)) inset !important;
+  box-shadow: 0 0 0 10rem var(--color-background)) inset !importan;
+  -webkit-box-shadow: 0 0 0 10rem var(--color-background)) inset !importan;
 }
 
 .quantity__input::-webkit-outer-spin-button,
@@ -1625,7 +1625,7 @@ input[type='checkbox'] {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(var(--color-background));
+  background: var(--color-background);
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -1639,8 +1639,8 @@ input[type='checkbox'] {
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-base-accent-1));
-  color: rgb(var(--color-base-solid-button-labels));
+  background-color: var(--color-base-accent-1);
+  color: var(--color-base-solid-button-labels);
   height: 1.7rem;
   width: 1.7rem;
   border-radius: 100%;
@@ -1672,7 +1672,7 @@ input[type='checkbox'] {
 }
 
 .announcement-bar__link:hover {
-  color: rgb(var(--color-foreground));
+  color: var(--color-foreground);
   background-color: rgba(var(--color-card-hover), 0.06);
 }
 
@@ -1725,7 +1725,7 @@ input[type='checkbox'] {
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: rgb(var(--color-background));
+  background-color: var(--color-background);
 }
 
 .header-wrapper--border-bottom {
@@ -1737,7 +1737,7 @@ input[type='checkbox'] {
   grid-template-areas: 'left-icon heading icons';
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  background-color: rgb(var(--color-background));
+  background-color: var(--color-background);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -1807,7 +1807,7 @@ input[type='checkbox'] {
 }
 
 .header__heading-link:hover .h2 {
-  color: rgb(var(--color-foreground));
+  color: var(--color-foreground);
 }
 
 .header__heading-link .h2 {
@@ -1864,14 +1864,13 @@ input[type='checkbox'] {
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 1.4rem;
+  width: 1.4rem;
   fill: none;
   vertical-align: middle;
 }
 
-.header__icon,
-.header__icon--cart .icon {
+.header__icon {
   height: 4.4rem;
   width: 4.4rem;
 }
@@ -2047,7 +2046,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .header__menu-item:hover {
-  color: rgb(var(--color-foreground));
+  color: var(--color-foreground);
 }
 
 .header__menu-item span {
@@ -2061,7 +2060,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
+  color: var(--color-foreground);
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
