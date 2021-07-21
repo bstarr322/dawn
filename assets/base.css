@@ -1659,8 +1659,9 @@ input[type='checkbox'] {
 }
 
 .announcement-bar {
+  background-color: var(--color-ink);
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
-  color: rgb(var(--color-foreground));
+  color: var(--color-white);
 }
 
 .announcement-bar__link {
