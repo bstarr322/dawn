@@ -129,6 +129,10 @@
   .image-with-text__grid--reverse .image-with-text__content {
     /* margin-left: auto; */
   }
+
+  .image-with-text .button {
+    justify-content: normal;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -156,5 +160,9 @@
 
   .image-with-text__text {
     max-width: 49rem;
+  }
+
+  .image-with-text .button {
+    padding-left: calc(50vw - 720px + 3rem);
   }
 }
