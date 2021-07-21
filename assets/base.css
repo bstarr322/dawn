@@ -67,9 +67,14 @@
   --color-button-text: var(--color-background);
 }
 
+.button--primary {
+  --color-button-background: var(--color-ink);
+  --color-button-text: var(--color-white);
+}
+
 .button--secondary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
+  --color-button-background: var(--color-ink);
+  --color-button-text: var(--color-white);
   --alpha-button-background: 0;
 }
 
@@ -82,8 +87,18 @@
 }
 
 .button--tertiary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
+  /*--color-button: var(--color-base-outline-button-labels);
+  --color-button-text: var(--color-base-outline-button-labels);*/
+  --color-button-background: var(--color-light-grey);
+  --color-button-text: var(--color-ink);
+  --color-button-border: var(--color-ink);
+  --alpha-button-background: 0;
+  --alpha-button-border: 0.2;
+}
+
+.button--white {
+  --color-button-background: var(--color-white);
+  --color-button-text: var(--color-ink);
   --alpha-button-background: 0;
   --alpha-button-border: 0.2;
 }
@@ -1136,6 +1151,7 @@ deferred-media {
   font-family: var(--font-heading-family);
   font-size: 1.2rem;
   font-style: normal;
+  font-weight: 700;
   line-height: 1.667;
   letter-spacing: 2px;
   padding: 2rem 3rem;
@@ -1144,11 +1160,12 @@ deferred-media {
   border: 0;
   border-radius: 0;
   background-color: var(--color-button-background);
+  border: 1px solid var(--color-button-border);
   /* box-shadow: 0 0 0 0.1rem var(--color-button-border); */
   color: var(--color-button-text);
   min-width: 12rem;
   min-height: 4.5rem;
-  transition: box-shadow var(--duration-short) ease;
+  transition: all ease 0.3s;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -1165,9 +1182,48 @@ deferred-media {
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
+.button--secondary::after {
+  content: '';
+  display: block;
+  width: 1.6rem;
+  height: 0.566rem;
+  margin-left: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='6' viewBox='0 0 17 6' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6716 5.82873L16.5 3.0003L13.6716 0.171875L12.9645 0.878982L14.6109 2.52542H0.5V3.52542H14.5607L12.9645 5.12162L13.6716 5.82873Z' fill='white'/%3E%3C/svg%3E");
+}
+
 .button--tertiary {
   min-width: 9rem;
   min-height: 3.5rem;
+}
+
+.button--link,
+.button--back {
+  padding: 0;
+  background-color: transparent;
+  color: var(--color-ink);
+  min-width: 0;
+  min-height: 0;
+  width: auto;
+}
+
+.button--link::after,
+.button--back::before {
+  content: '';
+  display: block;
+  width: 1.6rem;
+  height: 0.566rem;
+  margin-left: 1.2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='16' viewBox='0 0 41 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M33.4289 15.0708L40.5 7.99978L33.4289 0.928711L31.6612 2.69648L35.7773 6.81258H0.5V9.31258H35.6517L31.6612 13.3031L33.4289 15.0708Z' fill='%23222222'/%3E%3C/svg%3E");
+}
+
+.button--back::before {
+  margin-right: 1.2rem;
+  margin-left: 0;
+  transform: rotate(180deg);
 }
 
 .button--small {
@@ -1180,7 +1236,15 @@ deferred-media {
 .shopify-challenge__button:hover,
 .customer button:hover {
   /* box-shadow: 0 0 0 0.2rem var(--color-button-border); */
+  --color-button-background: var(--color-subdued);
 }
+
+.button--tertiary:not([disabled]):hover,
+.button--white:not([disabled]):hover {
+  --color-button-background: var(--color-ink);
+  --color-button-text: var(--color-white);
+}
+
 
 /* Button - other */
 
@@ -1190,8 +1254,9 @@ deferred-media {
 .customer button:disabled,
 .customer button[aria-disabled='true'],
 .customer button.disabled {
+  --color-button-background: var(--color-medium-grey);
+  --color-button-text: var(--color-white);
   cursor: not-allowed;
-  background-color: var(--color-medium-grey);
 }
 
 .button--full-width {
