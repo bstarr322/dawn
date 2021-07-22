@@ -49,6 +49,19 @@
 }
 
 @media screen and (min-width: 750px) {
+  .collection-list-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 3rem;
+    align-items: center;
+    padding-left: 3rem;
+  }
+
+  .collection-list-wrapper .title-wrapper {
+    display: grid;
+    grid-gap: 2rem;
+  }
+
   .collection-list-wrapper.no-heading {
     margin-top: 6rem;
   }

@@ -2,12 +2,12 @@
 
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
-<div class="collection-list-wrapper page-width {% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %}">
-  <div class="title-wrapper-with-link">
-    <h2 class="collection-list-title">{{ section.settings.title | escape }}</h2>
+<div class="collection-list-wrapper">
+  <div class="title-wrapper title-wrapper-with-link">
+    <h2 class="collection-list-title utility">{{ section.settings.title | escape }}</h2>
 
     {%- if section.settings.show_view_all -%}
-      <a href="{{ routes.collections_url }}" class="link underlined-link large-up-hide">{{ 'sections.collection_list.view_all' | t }}</a>
+      <a href="{{ routes.collections_url }}" class="link underlined-link small-hide">Shop Now</a>
     {%- endif -%}
   </div>
 
@@ -20,12 +20,18 @@
           {%- render 'collection-card' _section: section, _block: block -%}
         </li>
       {%- endfor -%}
+
+      <li class="view-all-wrapper">
+        {%- if section.settings.show_view_all -%}
+          <a href="{{ routes.collections_url }}" class="button button--link small-hide">{{ 'sections.collection_list.view_all' | t }}</a>
+        {%- endif -%}
+      </li>
     </ul>
   </flickity-component>
 
   {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
-    <div class="center">
-      <a href="{{ routes.collections_url }}" class="button">{{ 'sections.collection_list.view_all' | t }}</a>
+    <div class="center medium-up-hide">
+      <a href="{{ routes.collections_url }}" class="link underlined-link">{{ 'sections.collection_list.view_all' | t }}</a>
     </div>
   {%- endif -%}
 </div>
