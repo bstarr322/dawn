@@ -24,8 +24,8 @@
         "16258335436eb94c3b-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "Explore Now",
+            "button_link": "shopify:\/\/collections\/best-sellers"
           }
         }
       },
@@ -131,50 +131,93 @@
         "title": "Books",
         "image_ratio": "adapt",
         "color_scheme": "background-1",
-        "swipe_on_mobile": true,
         "image_padding": true,
         "show_view_all": true
       }
     },
-    "1625815753e4ff2717": {
-      "type": "image-banner",
+    "16268998870aeddab0": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers",
+        "collection": "best-sellers",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_desktop": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_vendor": true
+      }
+    },
+    "16269597045d64ab9d": {
+      "type": "image-with-text",
       "blocks": {
-        "1625815753e4ff2717-0": {
+        "16269597045d64ab9d-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner"
+            "heading": "H & W Blanket Series"
           }
         },
-        "1625815753e4ff2717-1": {
+        "16269597045d64ab9d-1": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
+            "text": "<p>In support of local heritage and artisan enterprises, Hauser & Wirth is proud to present the Artist Blanket – the result of an annual collaboration between gallery artists and ROAM, a small studio based at the heart of the Scottish cashmere and fine woollens industry.<\/p>"
           }
         },
-        "1625815753e4ff2717-2": {
-          "type": "buttons",
+        "16269597045d64ab9d-2": {
+          "type": "button",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label": "Explore",
+            "button_link": "shopify:\/\/collections\/best-sellers"
           }
         }
       },
       "block_order": [
-        "1625815753e4ff2717-0",
-        "1625815753e4ff2717-1",
-        "1625815753e4ff2717-2"
+        "16269597045d64ab9d-0",
+        "16269597045d64ab9d-1",
+        "16269597045d64ab9d-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/hero.jpg",
-        "image_2": "shopify:\/\/shop_images\/collection-1.jpg",
-        "desktop_text_box_position": "flex-start",
-        "color_scheme": "background-2",
-        "stack_images_on_mobile": true,
-        "adapt_height_first_image": false
+        "image": "shopify:\/\/shop_images\/chair.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first",
+        "full_width": true
+      }
+    },
+    "162695979530ada741": {
+      "type": "collection-list",
+      "blocks": {
+        "162695979530ada741-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "162695979530ada741-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "162695979530ada741-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "162695979530ada741-0",
+        "162695979530ada741-1",
+        "162695979530ada741-2"
+      ],
+      "settings": {
+        "title": "from our locations",
+        "image_ratio": "adapt",
+        "color_scheme": "background-1",
+        "image_padding": false,
+        "show_view_all": true
       }
     }
   },
@@ -183,6 +226,8 @@
     "featured_products",
     "image_text",
     "16258335670345979c",
-    "1625815753e4ff2717"
+    "16268998870aeddab0",
+    "16269597045d64ab9d",
+    "162695979530ada741"
   ]
 }
