@@ -1,60 +1,188 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "settings": {
-        "desktop_text_box_position": "flex-end"
-      },
+    "16258335436eb94c3b": {
+      "type": "image-with-text",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "ddccf559-3b12-4cca-b23c-4edfef945dc5": {
+          "type": "sub_heading",
           "settings": {
-            "heading": "Talk about your brand"
+            "sub_heading": "Exclusive Edition"
           }
         },
-        "button": {
-          "type": "buttons",
+        "16258335436eb94c3b-0": {
+          "type": "heading",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_label_2": ""
+            "heading": "The Lorna Simpson Edition"
+          }
+        },
+        "16258335436eb94c3b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Born in Brooklyn, Lorna Simpson came to prominence in the 1980s with her pioneering approach to conceptual photography.<\/p>"
+          }
+        },
+        "16258335436eb94c3b-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
-      ]
+        "ddccf559-3b12-4cca-b23c-4edfef945dc5",
+        "16258335436eb94c3b-0",
+        "16258335436eb94c3b-1",
+        "16258335436eb94c3b-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hero.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first",
+        "full_width": true
+      }
     },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products"
+        "title": "Best Sellers",
+        "collection": "best-sellers",
+        "products_to_show": 12,
+        "show_view_all": true,
+        "swipe_on_desktop": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_vendor": true
       }
     },
     "image_text": {
       "type": "image-with-text",
       "blocks": {
+        "abaa57e9-a6a8-4fd5-8a31-b2a8fa771cfc": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "Books"
+          }
+        },
         "heading": {
-          "type": "heading"
+          "type": "heading",
+          "settings": {
+            "heading": "Marcel Duchamp"
+          }
         },
         "text": {
-          "type": "text"
+          "type": "text",
+          "settings": {
+            "text": "<p>‘Marcel Duchamp,’ the artist’s first legendary monograph and catalogue raisonné by French art historian and novelist Robert Lebel, was published in French in 1959 and translated into English for Grove Press by George Heard Hamilton later that same year. The book was a cooperation between Lebel and Duchamp, and beyond Lebel’s extensive writing and bibliography, additional chapters were authored by Duchamp, H.P. Roché, and André Breton.<\/p>"
+          }
         },
         "button": {
-          "type": "button"
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
+        "abaa57e9-a6a8-4fd5-8a31-b2a8fa771cfc",
         "heading",
         "text",
         "button"
-      ]
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/featured-image.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first",
+        "full_width": true
+      }
+    },
+    "16258335670345979c": {
+      "type": "collection-list",
+      "blocks": {
+        "16258335670345979c-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "16258335670345979c-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "16258335670345979c-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "16258335670345979c-0",
+        "16258335670345979c-1",
+        "16258335670345979c-2"
+      ],
+      "settings": {
+        "title": "Books",
+        "image_ratio": "adapt",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": true,
+        "image_padding": true,
+        "show_view_all": true
+      }
+    },
+    "1625815753e4ff2717": {
+      "type": "image-banner",
+      "blocks": {
+        "1625815753e4ff2717-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        },
+        "1625815753e4ff2717-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "1625815753e4ff2717-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1625815753e4ff2717-0",
+        "1625815753e4ff2717-1",
+        "1625815753e4ff2717-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hero.jpg",
+        "image_2": "shopify:\/\/shop_images\/collection-1.jpg",
+        "desktop_text_box_position": "flex-start",
+        "color_scheme": "background-2",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
     }
   },
   "order": [
-    "image_banner",
+    "16258335436eb94c3b",
     "featured_products",
-    "image_text"
+    "image_text",
+    "16258335670345979c",
+    "1625815753e4ff2717"
   ]
 }

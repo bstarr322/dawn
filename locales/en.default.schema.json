@@ -551,6 +551,9 @@
         "show_social": {
           "label": "Show social media icons"
         },
+        "social_heading": {
+          "label": "Heading"
+        },
         "header__3": {
           "content": "Country/region selector"
         },
@@ -574,6 +577,18 @@
         },
         "payment_enable": {
           "label": "Show payment icons"
+        },
+        "color": {
+          "label": "Footer Background Color"
+        },
+        "header__8": {
+          "content": "Bottom Links"
+        },
+        "copyright": {
+          "label": "Copyright"
+        },
+        "bottom_links": {
+          "label": "Bottom Link List"
         }
       }
     },
