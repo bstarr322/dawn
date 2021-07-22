@@ -1439,7 +1439,7 @@ deferred-media {
 .customer .field input {
   flex-grow: 1;
   text-align: left;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   border-bottom: 2px solid var(--color-ink)
 }
 
@@ -1448,7 +1448,7 @@ deferred-media {
   font-family: var(--font-heading-family);
   font-size: 12px;
   line-height: 20px;
-  left: 1.5rem;
+  left: 0;
   top: 1rem;
   margin-bottom: 0;
   pointer-events: none;
