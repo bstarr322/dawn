@@ -219,6 +219,185 @@
         "image_padding": false,
         "show_view_all": true
       }
+    },
+    "1626959958471a136c": {
+      "type": "collage",
+      "disabled": true,
+      "blocks": {
+        "1626959958471a136c-0": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "Describe the video for customers using screen readers",
+            "image_padding": false
+          }
+        },
+        "1626959958471a136c-1": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "secondary_background": false,
+            "second_image": false,
+            "image_padding": false
+          }
+        },
+        "1626959958471a136c-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "1626959958471a136c-0",
+        "1626959958471a136c-1",
+        "1626959958471a136c-2"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "1626964864cae94c14": {
+      "type": "multicolumn",
+      "blocks": {
+        "1626964864cae94c14-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-publications.jpg",
+            "column_link": "shopify:\/\/products\/copy-of-test-product",
+            "title": "Publications",
+            "text": ""
+          }
+        },
+        "1626964864cae94c14-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-editions.jpg",
+            "column_link": "shopify:\/\/products\/test-product",
+            "title": "Editions",
+            "text": ""
+          }
+        },
+        "1626964864cae94c14-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-gifts.jpg",
+            "column_link": "",
+            "title": "Gifts",
+            "text": ""
+          }
+        },
+        "93e70a58-5a26-42e7-8442-ed1e24b1d588": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-blankets.jpg",
+            "column_link": "shopify:\/\/products\/test-product-3",
+            "title": "Blankets",
+            "text": ""
+          }
+        },
+        "b6568faa-e0e1-44ad-8f2d-9f8191340871": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-scarves.jpg",
+            "column_link": "",
+            "title": "Scarves",
+            "text": ""
+          }
+        },
+        "509a46a8-622b-4504-a64d-f5b69f64ea98": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-editions-2.jpg",
+            "column_link": "",
+            "title": "Gifts",
+            "text": ""
+          }
+        },
+        "ae2ecddb-5d8f-47f5-bb48-b27a82ba1652": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-artists.jpg",
+            "column_link": "",
+            "title": "Artists",
+            "text": ""
+          }
+        },
+        "4ed63141-89d1-4722-91ba-25e62350d370": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-editions-3.jpg",
+            "column_link": "",
+            "title": "Editions",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1626964864cae94c14-0",
+        "1626964864cae94c14-1",
+        "1626964864cae94c14-2",
+        "93e70a58-5a26-42e7-8442-ed1e24b1d588",
+        "b6568faa-e0e1-44ad-8f2d-9f8191340871",
+        "509a46a8-622b-4504-a64d-f5b69f64ea98",
+        "ae2ecddb-5d8f-47f5-bb48-b27a82ba1652",
+        "4ed63141-89d1-4722-91ba-25e62350d370"
+      ],
+      "settings": {
+        "title": "A collection of gifts and editions from our artists.",
+        "layout": "full-width",
+        "columns_per_row": 4,
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "16269648752b89e551": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "16269648752b89e551-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        },
+        "16269648752b89e551-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "16269648752b89e551-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "16269648752b89e551-0",
+        "16269648752b89e551-1",
+        "16269648752b89e551-2"
+      ],
+      "settings": {
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
     }
   },
   "order": [
@@ -228,6 +407,9 @@
     "16258335670345979c",
     "16268998870aeddab0",
     "16269597045d64ab9d",
-    "162695979530ada741"
+    "162695979530ada741",
+    "1626959958471a136c",
+    "1626964864cae94c14",
+    "16269648752b89e551"
   ]
 }
