@@ -1443,6 +1443,12 @@
         },
         "email_form": {
           "name": "Email form"
+        },
+        "password_form": {
+          "name": "Password form"
+        },
+        "logo": {
+          "name": "Logo"
         }
       },
       "presets": {
