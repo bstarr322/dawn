@@ -95,3 +95,78 @@
 		}
 	}
 }
+
+// Newsletter styles
+
+.newsletter__wrapper {
+	max-width: 600px;
+
+	h2 {
+		&.h5 {
+			text-transform: capitalize;
+			font-family: var(--font-body-family);
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 22px;
+			letter-spacing: 0.3px;
+			color: var(--color-ink);
+			margin-top: 80px;
+    	margin-bottom: 40px;
+		}
+	}
+
+	.newsletter__subheading {
+		text-transform: capitalize;
+		font-family: var(--font-body-family);
+		font-style: italic;
+		font-weight: normal;
+		font-size: 28px;
+		line-height: 40px;
+		letter-spacing: 0.01em;
+		color: var(--color-ink);
+		margin-top: 0;
+    margin-bottom: 30px;
+	}
+
+	.password-form {
+		margin-bottom: 15px;
+
+		.password-field {
+			flex: 100%;
+
+			.field__input {
+				text-align: center;
+			}
+
+			.field__label {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+
+		.password-button {
+			flex: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.password__footer-text {
+		font-family: var(--font-body-family);
+		font-style: italic;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 17px;
+		color: var(--color-ink);
+		margin-top: 25px;
+
+		a {
+			font-family: var(--font-heading-family);
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 20px;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+		}
+	}
+}

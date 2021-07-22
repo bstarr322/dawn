@@ -1440,11 +1440,14 @@ deferred-media {
   flex-grow: 1;
   text-align: left;
   padding: 1.5rem;
+  border-bottom: 2px solid var(--color-ink)
 }
 
 .field__label,
 .customer .field label {
-  font-size: 1.6rem;
+  font-family: var(--font-heading-family);
+  font-size: 12px;
+  line-height: 20px;
   left: 1.5rem;
   top: 1rem;
   margin-bottom: 0;
@@ -1452,9 +1455,9 @@ deferred-media {
   position: absolute;
   transition: top var(--duration-short) ease,
     font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
-  letter-spacing: 0.1rem;
-  line-height: 1.5;
+  color: var(--color-ink);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .field__input:focus ~ .field__label,
