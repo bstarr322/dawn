@@ -918,7 +918,7 @@ summary::-webkit-details-marker {
 
 @media screen and (min-width: 750px) {
   .grid__item {
-    padding-left: 0.275rem;
+    padding-left: 0.5rem;
     padding-bottom: 1rem;
     width: calc(25% - 0.275rem * 3 / 4);
     max-width: 50%;
@@ -1198,7 +1198,9 @@ deferred-media {
 }
 
 .button--link,
-.button--back {
+.button--back,
+.button--previous,
+.button--next {
   padding: 0;
   background-color: transparent;
   color: var(--color-ink);

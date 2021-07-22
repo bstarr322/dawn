@@ -26,6 +26,7 @@
         </div>
       </div>
 
+      {%- if show_content -%}
       <div class="card__text card__text-spacing card-colored card__text-hover{% if _section.settings.image_padding == false %} color-{{ _section.settings.color_scheme }}{% endif %}">
         {% unless _section.settings.image_padding %}<div class="overlay-card"></div>{% endunless %}
         <h3>
@@ -36,6 +37,7 @@
           {%- endif -%}
         </h3>
       </div>
+      {%- endif -%}
     {%- else -%}
       <div class="overlay-card"></div>
       <div class="card__text-spacing card__text-hover">
