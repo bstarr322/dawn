@@ -124,6 +124,10 @@
           "label": "Instagram",
           "info": "http://instagram.com/shopify"
         },
+        "social_wechat_link": {
+          "label": "Wechat",
+          "info": "https://wechat.com/@shopify"
+        },
         "social_tiktok_link": {
           "label": "TikTok",
           "info": "https://tiktok.com/@shopify"

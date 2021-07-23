@@ -467,6 +467,15 @@ blockquote {
   line-height: 1.2;
 }
 
+.caption--secondary {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
 @media screen and (min-width: 750px) {
   .caption {
     font-size: 1.4rem;
@@ -560,10 +569,10 @@ table:not([class]) th {
   opacity: 0.7;
 }
 
-a:empty,
+/*a:empty,*/
 ul:empty,
 dl:empty,
-div:empty,
+/*div:empty,*/
 section:empty,
 article:empty,
 p:empty,
@@ -574,6 +583,10 @@ h4:empty,
 h5:empty,
 h6:empty {
   display: none;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
 }
 
 .link,
@@ -918,7 +931,7 @@ summary::-webkit-details-marker {
 
 @media screen and (min-width: 750px) {
   .grid__item {
-    padding-left: 0.275rem;
+    padding-left: 0.5rem;
     padding-bottom: 1rem;
     width: calc(25% - 0.275rem * 3 / 4);
     max-width: 50%;
@@ -1198,7 +1211,9 @@ deferred-media {
 }
 
 .button--link,
-.button--back {
+.button--back,
+.button--previous,
+.button--next {
   padding: 0;
   background-color: transparent;
   color: var(--color-ink);
@@ -1424,7 +1439,7 @@ deferred-media {
 .customer .field input {
   flex-grow: 1;
   text-align: left;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   border-bottom: 2px solid var(--color-ink)
 }
 
@@ -1433,7 +1448,7 @@ deferred-media {
   font-family: var(--font-heading-family);
   font-size: 12px;
   line-height: 20px;
-  left: 1.5rem;
+  left: 0;
   top: 1rem;
   margin-bottom: 0;
   pointer-events: none;
@@ -1462,7 +1477,7 @@ deferred-media {
 .customer .field input:focus,
 .customer .field input:not(:placeholder-shown),
 .customer .field input:-webkit-autofill {
-  padding: 2.2rem 1.5rem 0.8rem;
+  padding: 2.2rem 1.5rem 0.8rem 0;
 }
 
 .field__input::-webkit-search-cancel-button,
