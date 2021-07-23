@@ -905,7 +905,7 @@ summary::-webkit-details-marker {
 }
 
 /* component-grid */
-.grid {
+/*.grid {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
@@ -1078,7 +1078,7 @@ summary::-webkit-details-marker {
     box-sizing: content-box;
     margin: 0;
   }
-}
+}*/
 
 /* component-media */
 .media {
