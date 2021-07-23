@@ -2,39 +2,43 @@
 
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
-<div class="collection-list-wrapper">
+<flickity-component class="collection-list-wrapper">
   <div class="title-wrapper title-wrapper-with-link">
-    <h2 class="collection-list-title utility">{{ section.settings.title | escape }}</h2>
 
+    <div class="flickity-button-wrapper">
+      <button class="button button--previous" data-slider-previous>{%- render 'icon-arrow-left' -%}</button>
+      <h2 class="collection-list-title utility medium-up-hide">{{ section.settings.title | escape }}</h2>
+      <button class="button button--next" data-slider-next>{%- render 'icon-arrow' -%}</button>
+    </div>
+
+    <h2 class="collection-list-title utility small-hide">{{ section.settings.title | escape }}</h2>
     {%- if section.settings.show_view_all -%}
       <a href="{{ routes.collections_url }}" class="link underlined-link small-hide">Shop Now</a>
     {%- endif -%}
   </div>
 
-  <flickity-component>
-    <ul class="collection-list"
-      role="list" data-slider
-    >
-      {%- for block in section.blocks -%}
-        <li class="collection-list__item" {{ block.shopify_attributes }}>
-          {%- render 'collection-card' _section: section, _block: block -%}
-        </li>
-      {%- endfor -%}
-
-      <li class="view-all-wrapper">
-        {%- if section.settings.show_view_all -%}
-          <a href="{{ routes.collections_url }}" class="button button--link small-hide">{{ 'sections.collection_list.view_all' | t }}</a>
-        {%- endif -%}
+  <ul class="collection-list"
+    role="list" data-slider data-watch-css="false" data-prev-next-buttons='false'
+  >
+    {%- for block in section.blocks -%}
+      <li class="collection-list__item" {{ block.shopify_attributes }}>
+        {%- render 'collection-card' _section: section, _block: block, show_content: false -%}
       </li>
-    </ul>
-  </flickity-component>
+    {%- endfor -%}
 
-  {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
+    <li class="view-all-wrapper small-hide">
+      {%- if section.settings.show_view_all -%}
+        <a href="{{ routes.collections_url }}" class="button button--link">{{ 'sections.collection_list.view_all' | t }}</a>
+      {%- endif -%}
+    </li>
+  </ul>
+
+  {%- if section.settings.show_view_all -%}
     <div class="center medium-up-hide">
       <a href="{{ routes.collections_url }}" class="link underlined-link">{{ 'sections.collection_list.view_all' | t }}</a>
     </div>
   {%- endif -%}
-</div>
+</flickity-component>
 
 {% schema %}
 {
