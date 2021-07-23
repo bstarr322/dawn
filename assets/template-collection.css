@@ -63,10 +63,6 @@
   }
 }
 
-.template-search .grid__item--small {
-  padding-bottom: 0.5rem;
-}
-
 .collection.loading .collection-product-count {
   visibility: hidden;
 }
@@ -438,7 +434,8 @@ a.active-facets__button:focus {
 a.active-facets__button:focus-visible .active-facets__button-inner,
 a.active-facets__button:focus .active-facets__button-inner {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2),
-    0 0 0 0.2rem rgb(var(--color-background)), 0 0 0 0.4rem rgb(var(--color-foreground));
+    0 0 0 0.2rem rgb(var(--color-background)),
+    0 0 0 0.4rem rgb(var(--color-foreground));
   outline: none;
 }
 
