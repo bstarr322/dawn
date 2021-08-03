@@ -56,6 +56,9 @@
     {{ 'customer.login_page.title' | t }}
   </h1>
   <div>
+    <p>
+      {{ 'customer.login_page.subtext' | t }}
+    </p>
     {%- if recover_success == true -%}
       <h3 class="form__message" tabindex="-1" autofocus>
         <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
@@ -117,18 +120,24 @@
           </label>
         </div>
 
-        <a href="#recover">
+        <p class="caption">
           {{ 'customer.login_page.forgot_password' | t }}
-        </a>
+          <a href="#recover" class="button button--link">
+            {{ 'customer.login_page.reset_password' | t }}
+          </a>
+        </p>
       {%- endif -%}
 
-      <button>
+      <button class="button button--secondary">
         {{ 'customer.login_page.sign_in' | t }}
       </button>
 
-      <a href="{{ routes.account_register_url }}">
-        {{ 'customer.login_page.create_account' | t }}
-      </a>
+      <p class="caption">
+        {{ 'customer.login_page.have_account' | t }}
+        <a href="{{ routes.account_register_url }}">
+          {{ 'customer.login_page.create_account' | t }}
+        </a>
+      </p>
       
     {%- endform -%}
   </div>
