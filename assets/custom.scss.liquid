@@ -60,6 +60,20 @@
 	.footer__list-social {
 		.link--text {
 			color: var(--color-white);
+			transition: all ease 0.3s;
+
+			&:hover {
+				color: var(--color-ink);
+				background-color: var(--color-white);
+
+				.icon {
+					transform: none;
+				}
+
+				path {
+					fill: var(--color-ink);
+				}
+			}
 		}
 	}
 
