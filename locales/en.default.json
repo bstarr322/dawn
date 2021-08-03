@@ -256,10 +256,11 @@
   },
   "customer": {
     "account": {
-      "title": "Account",
+      "title": "My Account",
       "details": "Account details",
       "view_addresses": "View addresses",
-      "return": "Return to Account details"
+      "return": "Return to Account details",
+      "welcome": "Welcome back,"
     },
     "account_fallback": "Account",
     "activate_account": {
@@ -271,7 +272,7 @@
       "cancel": "Decline invitation"
     },
     "addresses": {
-      "title": "Addresses",
+      "title": "My Addresses",
       "default": "Default",
       "add_new": "Add a new address",
       "edit_address": "Edit address",
@@ -291,7 +292,8 @@
       "cancel": "Cancel",
       "edit": "Edit",
       "delete": "Delete",
-      "delete_confirm": "Are you sure you wish to delete this address?"
+      "delete_confirm": "Are you sure you wish to delete this address?",
+      "primary_address": "Primary Address"
     },
     "log_in": "Log in",
     "log_out": "Log out",
@@ -332,7 +334,7 @@
       "subtotal": "Subtotal"
     },
     "orders": {
-      "title": "Order history",
+      "title": "My Orders",
       "order_number": "Order",
       "order_number_link": "Order number {{ number }}",
       "date": "Date",
