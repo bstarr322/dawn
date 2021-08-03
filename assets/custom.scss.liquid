@@ -256,7 +256,7 @@
 .customer {
 	&.account {
 		margin-top: 20px;
-		
+
 		@media screen and (min-width: 750px) {
 			margin: 6rem auto 9rem;
 		}
@@ -388,7 +388,20 @@
 		    }
 
 		    .delete {
+		    	float: right;
 		    	color: var(--color-subdued);
+
+		    	@media screen and (min-width: 750px) {
+		    		float: none;
+		    	}
+		    }
+
+		    .edit {
+		    	float: left;
+		    	
+		    	@media screen and (min-width: 750px) {
+		    		float: none;
+		    	}
 		    }
     	}
 		}
