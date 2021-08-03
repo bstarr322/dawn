@@ -92,11 +92,11 @@
 }
 
 .image-with-text__content > * + * {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .image-with-text__content > .image-with-text__text:empty ~ a {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .image-with-text__content > :first-child:is(.image-with-text__heading) {
@@ -143,8 +143,8 @@
 
 @media screen and (min-width: 990px) {
   .image-with-text__heading {
-    font-size: 3rem;
-    font-weight: 600;
+    /* font-size: 3rem;
+    font-weight: 600; */
   }
 
   .image-with-text__text {

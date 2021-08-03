@@ -11,7 +11,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
 <div class="featured-collection">
-  <div class="center {% if section.settings.show_view_all and section.settings.swipe_on_desktop %}title-wrapper-with-link{% endif %}{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}{% if section.settings.collection.all_products_count > 2 and section.settings.swipe_on_desktop and section.settings.products_to_show > 2 %} title-wrapper--self-padded-tablet-down{% endif %}">
+  <div class="center title-wrapper">
     <h2 class="utility title{% if section.settings.title == blank %} title--no-heading{% endif %}">{{ section.settings.title | escape }}</h2>
   </div>
 

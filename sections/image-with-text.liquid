@@ -39,6 +39,10 @@
               </h2>
             {%- when 'text' -%}
               <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+            {%- when 'price' -%}
+              <div class="image-with-text__price" {{ block.shopify_attributes }}>
+                {{ block.settings.price | escape }}
+              </div>
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -176,6 +180,18 @@
           "id": "text",
           "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
           "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price"
         }
       ]
     },
