@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "image_text": {
+      "type": "image-with-text",
+      "blocks": {
+        "abaa57e9-a6a8-4fd5-8a31-b2a8fa771cfc": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "LIZWORKS x Rashid Johnson"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "ANXIOUS MEN JEWELRY COLLECTION"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pushing the boundary between jewelry and art, this LIZWORKS collaboration features cuffs, rings and necklaces featuring imagery from Rashid Johnsons ANXIOUS MEN series all created in limited-editions. <\/p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "abaa57e9-a6a8-4fd5-8a31-b2a8fa771cfc",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/featured-image.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first",
+        "full_width": true
+      }
+    },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers",
+        "collection": "best-sellers",
+        "products_to_show": 12,
+        "show_view_all": true,
+        "swipe_on_desktop": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_vendor": true
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner"
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid"
+    }
+  },
+  "order": [
+    "image_text",
+    "featured_products",
+    "banner",
+    "product-grid"
+  ]
+}
