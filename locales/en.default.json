@@ -344,7 +344,11 @@
       "payment_status": "Payment status",
       "fulfillment_status": "Fulfillment status",
       "total": "Total",
-      "none": "You haven't placed any orders yet."
+      "none": "You haven't placed any orders yet.",
+      "placed": "Placed:",
+      "payment": "Payment",
+      "fulfillment": "Fullfillment",
+      "view_details": "View Details"
     },
     "recover_password": {
       "title": "Reset your password",
