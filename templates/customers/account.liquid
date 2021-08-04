@@ -60,9 +60,32 @@
           </table>
 
           <div class="order-history__mobile">
-            <div class="order">
-              <div class="order-header"></div>
-            </div>
+            {%- for order in customer.orders -%}
+              <div class="order-item">
+                <div class="order-header">
+                  <span class="utility">{{ 'customer.orders.order_number' | t }}{{ order.name }}</span>
+                  <div>
+                    <span class="utility">{{ 'customer.orders.placed' | t }}</span>
+                    {{ order.created_at | date: '%m/%d/%Y' }}  
+                  </div>
+                </div>
+                <div class="order-summary">
+                  <div class="order-summary__item">
+                    <span class="utility">{{ 'customer.orders.total' | t }}</span>
+                    <span>{{ order.total_price | money_with_currency }}</span>
+                  </div>
+                  <div class="order-summary__item">
+                    <span class="utility">{{ 'customer.orders.payment' | t }}</span>
+                    <span>{{ order.financial_status_label }}</span>
+                  </div>
+                  <div class="order-summary__item">
+                    <span class="utility">{{ 'customer.orders.fulfillment' | t }}</span>
+                    <span>{{ order.fulfillment_status_label }}</span>
+                  </div>
+                </div>
+                <a href="{{ order.customer_url }}">{{ 'customer.orders.view_details' | t }}</a>
+              </div>
+            {%- endfor -%}
           </div>
         {%- else -%}
           <p>{{ 'customer.orders.none' | t }}</p>
@@ -215,6 +238,7 @@
                 aria-controls="EditAddress_{{ address.id }}"
                 aria-expanded="false"
                 data-address-id="{{ address.id }}"
+                class="edit"
               >
                 {{ 'customer.addresses.edit' | t }}
               </a>
@@ -223,6 +247,7 @@
                 aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
                 data-target="{{ address.url }}"
                 data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+                class="delete"
               >
                 {{ 'customer.addresses.delete' | t }}
               </a>
