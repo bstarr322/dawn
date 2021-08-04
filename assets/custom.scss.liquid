@@ -254,6 +254,14 @@
 	}
 }
 .customer {
+	&.account {
+		margin-top: 20px;
+
+		@media screen and (min-width: 750px) {
+			margin: 6rem auto 9rem;
+		}
+	}
+
 	h4 {
 		font-size: 16px;
 
@@ -262,6 +270,10 @@
 		}
 	}
 	.order-history {
+		display: none;
+		@media screen and (min-width: 750px) {
+			display: table;
+		}
 		thead {
 			th {
 				text-align: center;
@@ -297,12 +309,53 @@
 		}
 	}
 
+	.order-history__mobile {
+		display: block;
+
+		@media screen and (min-width: 750px) {
+			display: none;
+		}
+
+		.order-item {
+			a {
+				margin-top: 10px;
+    		margin-bottom: 50px;
+			}
+		}
+
+		.order-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 5px 0;
+	    border-bottom: 1px solid var(--color-medium-grey);
+	    margin-bottom: 15px;
+		}
+
+		.order-summary {
+			display: flex;
+			flex-flow: wrap;
+		}
+
+		.order-summary__item {
+			margin-right: 15px;
+			span {
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
 	.addresses {
 		div[data-address] {
-			display: flex;
-	    justify-content: space-between;
-	    align-items: center;
-	    flex-flow: wrap;
+			display: block;
+
+	    @media screen and (min-width: 750px) {
+	    	display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    flex-flow: wrap;	
+	    }
 
 	    #AddAddress {
 	    	flex-basis: 100%;
@@ -315,16 +368,143 @@
     	flex-flow: wrap;
 
     	li {
-    		flex-basis: 25%;
-		    max-width: 25%;
+    		flex-basis: 100%;
+		    max-width: 100%;
 		    margin-top: 0;
 		    text-align: left;
+
+		    @media screen and (min-width: 750px) {
+		    	flex-basis: 25%;
+		    	max-width: 25%;
+		    }
 
 		    a {
 		    	display: block;
 		    	margin-top: 20px;
 		    }
+
+		    h5 {
+		    	color: var(--color-grey);
+		    }
+
+		    .delete {
+		    	float: right;
+		    	color: var(--color-subdued);
+
+		    	@media screen and (min-width: 750px) {
+		    		float: none;
+		    	}
+		    }
+
+		    .edit {
+		    	float: left;
+		    	
+		    	@media screen and (min-width: 750px) {
+		    		float: none;
+		    	}
+		    }
     	}
 		}
 	}
+}
+
+// login page
+.login-wrapper {
+	margin-bottom: 0;
+
+	.login-form {
+		display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+
+	.customer {
+		&.login {
+			text-align: left;
+			margin: 0;
+	    width: 100%;
+	    max-width: 100%;
+
+	    @media screen and (min-width: 750px) {
+	    	width: 80%;
+	    }
+
+
+	    .caption {
+	    	a {
+	    		&.button {
+	    			display: inline-flex;
+	    		}
+	    	}
+	    }
+
+	    .button--secondary {
+	    	width: 100%;
+	    	justify-content: flex-start;
+	    }
+		}
+	}
+
+  .image-wrapper {
+  	display: none;
+
+  	@media screen and (min-width: 750px) {
+  		display: block;
+  	}
+
+    img {
+    	width: 100%;
+    	height: 100%;
+    }
+  }
+}
+
+//register page
+.register-wrapper {
+	margin-bottom: 0;
+
+	.register-form {
+		display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+
+	.customer {
+		&.register {
+			text-align: left;
+			margin: 0;
+	    width: 100%;
+	    max-width: 100%;
+
+	    @media screen and (min-width: 750px) {
+	    	width: 80%;
+	    }
+
+	    .caption {
+	    	a {
+	    		&.button {
+	    			display: inline-flex;
+	    		}
+	    	}
+	    }
+
+	    .button--secondary {
+	    	width: 100%;
+	    	justify-content: flex-start;
+	    }
+		}
+	}
+
+  .image-wrapper {
+  	display: none;
+
+  	@media screen and (min-width: 750px) {
+  		display: block;
+  	}
+
+    img {
+    	width: 100%;
+    	height: 100%;
+    }
+  }
 }

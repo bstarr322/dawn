@@ -285,5 +285,15 @@
         "info": "t:settings_schema.favicon.settings.favicon.info"
       }
     ]
+  },
+  {
+    "name": "account",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "login_image",
+        "label": "Login Image"
+      }
+    ]
   }
 ]
