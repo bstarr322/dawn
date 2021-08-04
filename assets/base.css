@@ -1,4 +1,27 @@
 /* Color custom properties */
+.color-ink {
+  color: var(--color-ink);
+}
+
+.color-subdued {
+  color: var(--color-subdued);
+}
+
+.color-grey {
+  color: var(--color-grey);
+}
+
+.color-medium-grey {
+  color: var(--color-medium-grey);
+}
+
+.color-light-grey {
+  color: var(--color-light-grey);
+}
+
+.color-green {
+  color: var(--color-green);
+}
 
 :root,
 .color-background-1 {
@@ -1169,6 +1192,7 @@ deferred-media {
   padding: 2rem 3rem;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all ease 0.3s;
   border: 0;
   border-radius: 0;
   background-color: var(--color-button-background);
@@ -1200,6 +1224,7 @@ deferred-media {
   width: 1.6rem;
   height: 0.566rem;
   margin-left: 1rem;
+  transition: all ease 0.3s;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='6' viewBox='0 0 17 6' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6716 5.82873L16.5 3.0003L13.6716 0.171875L12.9645 0.878982L14.6109 2.52542H0.5V3.52542H14.5607L12.9645 5.12162L13.6716 5.82873Z' fill='white'/%3E%3C/svg%3E");
@@ -1229,6 +1254,7 @@ deferred-media {
   width: 1.6rem;
   height: 0.566rem;
   margin-left: 1.2rem;
+  transition: all ease 0.3s;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='16' viewBox='0 0 41 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M33.4289 15.0708L40.5 7.99978L33.4289 0.928711L31.6612 2.69648L35.7773 6.81258H0.5V9.31258H35.6517L31.6612 13.3031L33.4289 15.0708Z' fill='%23222222'/%3E%3C/svg%3E");
@@ -1258,6 +1284,16 @@ deferred-media {
   --color-button-background: var(--color-ink);
   --color-button-text: var(--color-white);
 }
+
+.button--secondary:not([disabled]):hover:after,
+.button--link:not([disabled]):hover:after {
+  margin-left: 2rem;
+}
+
+.button--back:not([disabled]):hover:before {
+  margin-left: -1rem;
+}
+
 
 /* Button - other */
 

@@ -145,19 +145,31 @@
         "id": "sale_badge_color_scheme",
         "options": [
           {
-            "value": "accent-1",
-            "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.options__2.label"
+            "value": "ink",
+            "label": "Ink"
           },
           {
-            "value": "accent-2",
-            "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.options__3.label"
+            "value": "subdued",
+            "label": "Subdued"
           },
           {
-            "value": "background-2",
-            "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.options__1.label"
+            "value": "grey",
+            "label": "Grey"
+          },
+          {
+            "value": "medium-grey",
+            "label": "Medium Grey"
+          },
+          {
+            "value": "light-grey",
+            "label": "Light Grey"
+          },
+          {
+            "value": "green",
+            "label": "Green"
           }
         ],
-        "default": "accent-2",
+        "default": "ink",
         "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.label"
       },
       {
@@ -165,15 +177,31 @@
         "id": "sold_out_badge_color_scheme",
         "options": [
           {
-            "value": "background-1",
-            "label": "t:settings_schema.styles.settings.sold_out_badge_color_scheme.options__1.label"
+            "value": "ink",
+            "label": "Ink"
           },
           {
-            "value": "inverse",
-            "label": "t:settings_schema.styles.settings.sold_out_badge_color_scheme.options__2.label"
+            "value": "subdued",
+            "label": "Subdued"
+          },
+          {
+            "value": "grey",
+            "label": "Grey"
+          },
+          {
+            "value": "medium-grey",
+            "label": "Medium Grey"
+          },
+          {
+            "value": "light-grey",
+            "label": "Light Grey"
+          },
+          {
+            "value": "green",
+            "label": "Green"
           }
         ],
-        "default": "inverse",
+        "default": "grey",
         "label": "t:settings_schema.styles.settings.sold_out_badge_color_scheme.label"
       },
       {

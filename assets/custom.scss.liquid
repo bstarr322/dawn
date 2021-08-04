@@ -1,3 +1,11 @@
+/* The animation code */
+@keyframes slideIn {
+  0%   {transform: translateX(0);}
+  25%   {transform: translateX(-25%);}
+  50%   {transform: translateX(-50%);}
+  100%   {transform: translateX(-100%);}
+}
+
 // Section: Featured Collection
 .flickity-button-wrapper {
   display: grid;
@@ -41,6 +49,8 @@
 
 // Logo Bar
 .logo-bar {
+  // animation-name: slideIn;
+  // animation-duration: 4s;
   background-repeat: repeat;
   background-size: contain;
   height: 1rem;
