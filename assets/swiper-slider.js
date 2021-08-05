@@ -5,7 +5,7 @@ class SwiperJsComponent extends HTMLElement {
     this.previousButton = this.querySelector('[data-slider-previous]');
     this.nextButton = this.querySelector('[data-slider-next]');
 
-    this.swiperInstance = null;
+    this.sliderInstance = null;
 
     if (this.slider) {
       this.init();
@@ -16,24 +16,23 @@ class SwiperJsComponent extends HTMLElement {
     const { swiperDestroy } = this.slider.dataset;
 
     if (typeof swiperDestroy === 'undefined' || (swiperDestroy === 'mobile-down' && window.innerWidth >= 750) || (swiperDestroy === 'mobile-up' && window.innerWidth < 750)) {
-      this.swiperInstance = this.initSwiper(this.slider)
+      this.sliderInstance = this.initSlider(this.slider)
 
       window.addEventListener('resize', () => {
-        if (swiperDestroy == 'mobile-down' && window.innerWidth < 750 && typeof this.swiperInstance !== 'undefined') {
-          this.swiperInstance.destroy()
+        if (swiperDestroy == 'mobile-down' && window.innerWidth < 750 && typeof this.sliderInstance !== 'undefined') {
+          this.sliderInstance.destroy()
         } else {
-          if (typeof this.swiperInstance === 'undefined' || this.swiperInstance === null || this.swiperInstance.destroyed) {
-            this.swiperInstance = this.initSwiper(this.slider)
+          if (typeof this.sliderInstance === 'undefined' || this.sliderInstance === null || this.sliderInstance.destroyed) {
+            this.sliderInstance = this.initSlider(this.slider)
           }
         }
       });
     }
   }
 
-  initSwiper() {
-    const { swiperDestroy, slidesPerView, slidesPerViewTablet, slidesPerViewMobile, slidesGroup, slidesSpeed, slidesSpeedMobile, slidesLoop } = this.slider.dataset;
-    console.log(slidesGroup=='true')
-    const sliderInstance = new Swiper(this.slider, {
+  initSlider() {
+    const { swiperDestroy, slidesPerView, slidesPerViewTablet, slidesPerViewMobile, slidesGroup, slidesSpeed, slidesSpeedMobile, slidesLoop, slidesThumbs } = this.slider.dataset;
+    const settings = {
       // Optional parameters
       speed: parseInt(slidesSpeed) || 300,
       loop: slidesLoop == 'true' ? true : false,
@@ -76,7 +75,9 @@ class SwiperJsComponent extends HTMLElement {
       mousewheel: {
         forceToAxis: true
       },
-    });
+    };
+
+    const sliderInstance = new Swiper(this.slider, settings);
     return sliderInstance;
   }
 

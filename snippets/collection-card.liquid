@@ -1,4 +1,4 @@
-<a{% if _block.settings.collection != blank and _block.settings.collection.all_products_count > 0 %} href="{{ _block.settings.collection.url }}"{% endif %}
+<a {% if _block.settings.collection != blank and _block.settings.collection.all_products_count > 0 %} href="{{ _block.settings.collection.url }}"{% endif %}
   class="card animate-arrow link{% if _block.settings.collection.image != blank %} card--media{% else %}{% if _section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless _section.settings.image_padding %} card--light-border{% endunless %}"
 >
   <div class="card--stretch card-colored color-{{ _section.settings.color_scheme }}">
