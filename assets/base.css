@@ -837,6 +837,7 @@ summary::-webkit-details-marker {
 /* component-title */
 .title,
 .title-wrapper-with-link {
+  margin: 0;
   /* margin: 3rem 0 2rem; */
 }
 
@@ -845,7 +846,7 @@ summary::-webkit-details-marker {
 }
 
 .title-wrapper {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .title-wrapper-with-link {
@@ -931,7 +932,7 @@ summary::-webkit-details-marker {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-left: -0.5rem;
   padding: 0;
   list-style: none;
@@ -945,7 +946,7 @@ summary::-webkit-details-marker {
 
 .grid__item {
   padding-left: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   width: calc(25% - 0.5rem * 3 / 4);
   max-width: 50%;
   flex-grow: 1;

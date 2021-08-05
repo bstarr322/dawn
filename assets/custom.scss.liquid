@@ -764,9 +764,16 @@
 
 
 // Swiper Slier
+.swiper-wrapper.grid {
+  width: auto;
+  box-sizing: inherit;
+}
+
 .swiper-container-initialized {
   .swiper-wrapper.grid {
     flex-wrap: nowrap;
+    box-sizing: content-box;
+    width: 100%;
   }
 
   .grid--quarter-max.grid--4-col-desktop .grid__item {
