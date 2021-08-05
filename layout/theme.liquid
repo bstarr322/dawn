@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/lhv1eyh.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     {%- render 'css-variables' -%}
     
     {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -87,7 +89,11 @@
     <!-- JavaScript -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="{{ 'flickity-slider.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="{{ 'swiper-slider.js' | asset_url }}" defer="defer"></script>
+    <!-- <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script> -->
   </body>
 </html>
