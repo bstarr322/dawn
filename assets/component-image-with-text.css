@@ -31,6 +31,7 @@
 .image-with-text__media {
   background-color: transparent;
   min-height: 100%;
+  min-height: calc(100vh - 12rem);
 }
 
 .image-with-text__media--small {
