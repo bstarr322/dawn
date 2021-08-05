@@ -50,8 +50,8 @@
       {%- for block in section.blocks -%}
         {% case block.type %}
           {%- when 'button' -%}
-            {%- if block.settings.button_link != blank and block.settings.button_label != blank -%}
-              <a href="{{ block.settings.button_link }}" class="button button--secondary"{% if block.settings.button_link == blank %} aria-disabled="true"{% endif %} {{ block.shopify_attributes }}>
+            {%- if block.settings.button_label != blank -%}
+              <a href="{{ block.settings.button_link | default: 'javascript:(0);' }}" class="button button--secondary" {{ block.shopify_attributes }}>
                 {{ block.settings.button_label | escape }}
               </a>
             {%- endif -%}

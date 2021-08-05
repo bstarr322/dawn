@@ -32,6 +32,7 @@ class SwiperJsComponent extends HTMLElement {
 
   initSwiper() {
     const { swiperDestroy, slidesPerView, slidesPerViewTablet, slidesPerViewMobile, slidesGroup, slidesSpeed, slidesSpeedMobile, slidesLoop } = this.slider.dataset;
+    console.log(slidesGroup=='true')
     const sliderInstance = new Swiper(this.slider, {
       // Optional parameters
       speed: parseInt(slidesSpeed) || 300,
