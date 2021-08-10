@@ -1,0 +1,30 @@
+<div class="featured-collection-with-products">
+  <div class="title-wrapper">
+    {%- if title != blank -%}
+      <h2 class="title h5">{{ title }}</h2>
+    {%- endif -%}
+    
+    {%- if description != blank -%}
+      <div>{{ description }}</div>
+    {%- endif -%}
+  </div>
+
+  <div class="collection-products">
+    <div class="collection-card">
+      {%- render 'collection-card-primary' collection: collection-%}
+    </div>
+
+    {%- for product in collection.products limit: section.settings.products_to_show -%}
+      <div class="product-card">
+        {% render 'product-card',
+          product_card_product: product,
+          media_size: section.settings.image_ratio,
+          show_secondary_image: section.settings.show_secondary_image,
+          add_image_padding: section.settings.add_image_padding,
+          show_vendor: section.settings.show_vendor
+        %}
+      </div>
+    {%- endfor -%}
+
+  </div>
+</div>

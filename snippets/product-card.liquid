@@ -68,11 +68,11 @@
           <div class="card__content"><h2 class="card__text h6">{{ product_card_product.title }}</h2></div>
         {%- endif -%}
 
-        <div class="card__badge caption">
+        <div class="card__badge utility">
           {%- if product_card_product.available == false -%}
-            <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}" aria-hidden="true">{{ 'products.product.sold_out' | t }}</span>
+            <span class="badge color-{{ settings.sold_out_badge_color_scheme }}" aria-hidden="true">{{ 'products.product.sold_out' | t }}</span>
           {%- elsif product_card_product.compare_at_price > product_card_product.price and product_card_product.available -%}
-            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}" aria-hidden="true">{{ 'products.product.on_sale' | t }}</span>
+            <span class="badge color-{{ settings.sale_badge_color_scheme }}" aria-hidden="true">{{ 'products.product.on_sale' | t }}</span>
           {%- endif -%}
         </div>
       </div>
@@ -82,7 +82,7 @@
       <div class="card-information__wrapper">
         {%- if show_vendor -%}
           <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-          <div class="caption-with-letter-spacing light">{{ product_card_product.vendor }}</div>
+          <div class="caption light">{{ product_card_product.vendor }}</div>
         {%- endif -%}
 
         {%- if product_card_product.featured_media -%}
@@ -92,7 +92,7 @@
         {%- endif -%}
 
         {% comment %} TODO: metafield {% endcomment %}
-        <span class="caption-large light">{{ block.settings.description | escape }}</span>
+        <span class="caption light">{{ block.settings.description | escape }}</span>
 
         {% render 'price', product: product_card_product, price_class: '' %}
       </div>

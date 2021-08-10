@@ -198,7 +198,7 @@
 }
 
 .card-information__wrapper > *:not(.visually-hidden:first-child) + * {
-  margin-top: 0.5rem;
+  /*margin-top: 0.5rem;*/
 }
 
 .card-information__wrapper .caption {
@@ -237,16 +237,11 @@
 }
 
 .card__badge {
-  bottom: 1rem;
+  top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  left: 1rem;
+  left: 1.5rem;
   position: absolute;
-}
-
-.card__badge > * {
-  margin-right: 1rem;
-  margin-top: 0.5rem;
 }
 
 .overlay-card {

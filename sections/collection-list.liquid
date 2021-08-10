@@ -2,43 +2,61 @@
 
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
-<flickity-component class="collection-list-wrapper">
+<collection-list-component class="collection-list-wrapper">
   <div class="title-wrapper title-wrapper-with-link">
+    <div class="collection-list__titles swiper-container"
+      data-swiper-thumb-slider
+      data-slides-per-view="auto"
+      data-slides-speed="600"
+      >
 
-    <div class="flickity-button-wrapper">
-      <button class="button button--previous" data-slider-previous>{%- render 'icon-arrow-left' -%}</button>
-      <h2 class="collection-list-title utility medium-up-hide">{{ section.settings.title | escape }}</h2>
-      <button class="button button--next" data-slider-next>{%- render 'icon-arrow' -%}</button>
+      <div class="slider-button-wrapper">
+        <div data-slider-previous>{%- render 'icon-arrow-left' -%}</div>
+        <div data-slider-next>{%- render 'icon-arrow' -%}</div>
+      </div>
+
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide">
+            <h2 class="collection-list__title utility">{{ block.settings.collection.title }}</h2>
+          </div>
+        {%- endfor -%}
+      </div>
     </div>
 
-    <h2 class="collection-list-title utility small-hide">{{ section.settings.title | escape }}</h2>
+
     {%- if section.settings.show_view_all -%}
-      <a href="{{ routes.collections_url }}" class="link underlined-link small-hide">Shop Now</a>
+      <a href="{{ routes.collections_url }}" class="link underlined-link small-hide color-subdued">Shop Now</a>
     {%- endif -%}
   </div>
 
-  <ul class="collection-list"
-    role="list" data-slider data-watch-css="false" data-prev-next-buttons='false'
+  <div class="collection-list swiper-container"
+    data-swiper-slider
+    data-slides-per-view="auto"
+    data-slides-speed="600"
+    data-slides-thumbs="collection-list-titles"
   >
-    {%- for block in section.blocks -%}
-      <li class="collection-list__item" {{ block.shopify_attributes }}>
-        {%- render 'collection-card' _section: section, _block: block, show_content: false -%}
-      </li>
-    {%- endfor -%}
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        <div class="collection-list__item swiper-slide" {{ block.shopify_attributes }}>
+          {%- render 'collection-card' _section: section, _block: block, show_content: false -%}
+        </div>
+      {%- endfor -%}
 
-    <li class="view-all-wrapper small-hide">
-      {%- if section.settings.show_view_all -%}
-        <a href="{{ routes.collections_url }}" class="button button--link">{{ 'sections.collection_list.view_all' | t }}</a>
-      {%- endif -%}
-    </li>
-  </ul>
+      <div class="view-all-wrapper swiper-slide small-hide">
+        {%- if section.settings.show_view_all -%}
+          <a href="{{ routes.collections_url }}" class="button button--link">{{ 'sections.collection_list.view_all' | t }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
 
   {%- if section.settings.show_view_all -%}
     <div class="center medium-up-hide">
-      <a href="{{ routes.collections_url }}" class="link underlined-link">{{ 'sections.collection_list.view_all' | t }}</a>
+      <a href="{{ routes.collections_url }}" class="link underlined-link color-subdued mt-2">{{ 'sections.collection_list.view_all' | t }}</a>
     </div>
   {%- endif -%}
-</flickity-component>
+</collection-list-component>
 
 {% schema %}
 {
@@ -120,6 +138,11 @@
       "type": "featured_collection",
       "name": "t:sections.collection-list.blocks.featured_collection.name",
       "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
         {
           "type": "collection",
           "id": "collection",

@@ -1,5 +1,6 @@
 .featured-collection {
   position: relative;
+  overflow-x: hidden;
 }
 
 .featured-collection .grid:after {
@@ -32,6 +33,10 @@
     grid-gap: 3rem;
     align-items: center;
     padding-left: 3rem;
+  }
+
+  .featured-collection .title-wrapper {
+    margin-bottom: 9.3rem;
   }
 
   .featured-collection .grid:after {

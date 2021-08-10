@@ -1,0 +1,17 @@
+<a href="{{ collection.url }}">
+  <img srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | img_url: '165x' }} 165w,{%- endif -%}
+    {%- if collection.image.width >= 330 -%}{{ collection.image | img_url: '330x' }} 330w,{%- endif -%}
+    {%- if collection.image.width >= 535 -%}{{ collection.image | img_url: '535x' }} 535w,{%- endif -%}
+    {%- if collection.image.width >= 720 -%}{{ collection.image | img_url: '720x' }} 720w,{%- endif -%}
+    {%- if collection.image.width >= 940 -%}{{ collection.image | img_url: '940x' }} 940w,{%- endif -%}
+    {%- if collection.image.width >= 1440 -%}{{ collection.image | img_url: '1440x' }} 1440w,{%- endif -%}
+    {%- if collection.image.width >= 1880 -%}{{ collection.image | img_url: '1880x' }} 1880w{%- endif -%}"
+    src="{{ collection.image | img_url: '533x' }}"
+    sizes="auto"
+    alt="{{ collection.title | escape }}"
+    height="{{ collection.image.height }}"
+    width="{{ collection.image.width }}"
+    loading="lazy"
+    class="motion-reduce"
+  >
+</a>
