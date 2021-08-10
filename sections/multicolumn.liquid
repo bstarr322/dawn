@@ -9,28 +9,38 @@
         {{ section.settings.title | escape }}
       </h2>
     </div>
-    <slider-component class="slider-mobile-gutter">
-      <ul class="multicolumn-list grid grid--2-col grid--2-col-tablet grid--{{ section.settings.columns_per_row }}-col-desktop"
-        id="Slider-{{ section.id }}"
+    <swiperjs-component>
+      <div class="swiper-container"
         role="list"
-      >
-        {%- liquid
-          assign highest_ratio = 0
-          for block in section.blocks
-            if block.settings.image.aspect_ratio > highest_ratio
-              assign highest_ratio = block.settings.image.aspect_ratio
-            endif
-          endfor
-        -%}
-        {%- for block in section.blocks -%}
-          <li class="multicolumn-list__item grid__item{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
-            {%- render 'multicolumn-card', section: section, block: block, highest_ratio: highest_ratio -%}
-          </li>
-        {%- endfor -%}
-      </ul>
-    </slider-component>
+        data-swiper-slider
+        data-swiper-destroy="mobile-up"
+        data-slides-per-view="auto"
+        data-slides-speed="600"
+        >
+
+        <div class="multicolumn-list grid grid--2-col grid--2-col-tablet grid--{{ section.settings.columns_per_row }}-col-desktop"
+          id="Slider-{{ section.id }}"
+          role="list">
+          
+          {%- liquid
+            assign highest_ratio = 0
+            for block in section.blocks
+              if block.settings.image.aspect_ratio > highest_ratio
+                assign highest_ratio = block.settings.image.aspect_ratio
+              endif
+            endfor
+          -%}
+          {%- for block in section.blocks -%}
+            <div class="multicolumn-list__item grid__item swiper-slide {% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
+              {%- render 'multicolumn-card', section: section, block: block, highest_ratio: highest_ratio -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </swiperjs-component>
+
     <div class="center">
-      {%- if section.settings.button_label != blank -%}
+      {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
         <a class="button button--primary"{% if section.settings.button_link == blank %} aria-disabled="true" role="link"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
           {{ section.settings.button_label | escape }}
         </a>
