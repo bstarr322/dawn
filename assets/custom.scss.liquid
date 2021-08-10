@@ -1,9 +1,17 @@
 /* The animation code */
 @keyframes slideIn {
-  0%   {transform: translateX(0);}
-  25%   {transform: translateX(-25%);}
-  50%   {transform: translateX(-50%);}
-  100%   {transform: translateX(-100%);}
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .mt-1 {
@@ -65,7 +73,6 @@
 
 //   }
 // }
-
 
 // @media screen and (min-width: 750px) and (max-width: 989px) {
 //   .grid--one-third-max.grid--3-col-tablet .grid__item {
@@ -142,7 +149,6 @@
   .icon {
     height: auto;
   }
- 
 
   @media screen and (max-width: 749px) {
     [data-slider-previous] {
@@ -634,7 +640,7 @@
 
   .collection-products {
     display: flex;
-    overflow-x: auto;
+    overflow: hidden;
   }
 
   .collection-card {
@@ -646,6 +652,11 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  swiperjs-component {
+    width: 66.67%;
+    max-width: 66.67%;
   }
 
   .product-card {
@@ -761,7 +772,6 @@
     }
   }
 }
-
 
 // Swiper Slier
 .swiper-wrapper.grid {
