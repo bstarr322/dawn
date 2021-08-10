@@ -14,17 +14,41 @@
       {%- render 'collection-card-primary' collection: collection-%}
     </div>
 
-    {%- for product in collection.products limit: section.settings.products_to_show -%}
-      <div class="product-card">
-        {% render 'product-card',
-          product_card_product: product,
-          media_size: section.settings.image_ratio,
-          show_secondary_image: section.settings.show_secondary_image,
-          add_image_padding: section.settings.add_image_padding,
-          show_vendor: section.settings.show_vendor
-        %}
+    <swiperjs-component>
+      <div class="swiper-container" role="list" data-swiper-slider data-swiper-destroy="mobile-down"
+        data-slides-per-view="auto" data-slides-speed="600">
+    
+        <div
+          class="swiper-wrapper grid grid--2-col">
+          {%- for product in collection.products limit: section.settings.products_to_show -%}
+            <div class="product-card swiper-slide grid__item">
+              {% render 'product-card',
+                product_card_product: product,
+                media_size: section.settings.image_ratio,
+                show_secondary_image: section.settings.show_secondary_image,
+                add_image_padding: section.settings.add_image_padding,
+                show_vendor: section.settings.show_vendor
+              %}
+            </div>
+          {%- else -%}
+            {%- for i in (1..4) -%}
+            <div class="grid__item swiper-slide">
+              {% render 'product-card-placeholder' %}
+            </div>
+            {%- endfor -%}
+          {%- endfor -%}
+    
+          <div class="view-all-wrapper small-hide swiper-slide">
+            <a href="{{ section.settings.collection.url }}" class="button button--link">{{
+              'sections.featured_collection.view_all' | t }}</a>
+          </div>
+        </div>
+    
+        {% comment %}
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
+        {% endcomment %}
       </div>
-    {%- endfor -%}
-
+    </swiperjs-component>
   </div>
 </div>

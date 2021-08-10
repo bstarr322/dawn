@@ -1,8 +1,13 @@
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
+
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
 <div class="">
+  {% comment %}
   <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
+  {% endcomment %}
 
   {%- liquid
     case section.settings.sort
@@ -18,7 +23,26 @@
   -%}
 
   <ul class="collection-list" role="list">
-    {%- for collection in collections -%}
+    {%- if section.settings.show_default_collections != blank -%}
+      {%- for collection in collections -%}
+        <li class="collection-list__item">
+          {%-
+            render 'featured-collection-with-products'
+            title: collection.title,
+            description: collection.description,
+            collection: collection
+            section: section,
+          -%}
+
+          {%- unless forloop.last and section.blocks.size == 0 -%}
+            {%- render 'logo-bar' -%}
+          {%- endunless -%}
+        </li>
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- for block in section.blocks -%}
+      {%- assign collection = collections[block.settings.collection] -%}
       <li class="collection-list__item">
         {%-
           render 'featured-collection-with-products'
@@ -27,7 +51,7 @@
           collection: collection
           section: section,
         -%}
-
+      
         {%- unless forloop.last -%}
           {%- render 'logo-bar' -%}
         {%- endunless -%}
@@ -41,6 +65,12 @@
   "name": "t:sections.main-list-collections.name",
   "class": "spaced-section",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_default_collections",
+      "label": "Show default collections",
+      "default": false
+    },
     {
       "type": "text",
       "id": "title",
@@ -143,8 +173,21 @@
     {
       "type": "checkbox",
       "id": "show_vendor",
-      "default": false,
+      "default": true,
       "label": "t:sections.featured-collection.settings.show_vendor.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
     }
   ]
 }
