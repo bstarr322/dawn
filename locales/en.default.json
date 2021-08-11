@@ -163,11 +163,15 @@
         "name": "Name",
         "email": "Email",
         "phone": "Phone number",
-        "comment": "Comment",
-        "send": "Send",
+        "message": "Message",
+        "send": "Send Message",
         "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
         "error_heading": "Please adjust the following:"
-      }
+      },
+      "phone": "By Phone",
+      "email": "By Email",
+      "uk_service": "UK & EU Customer Service",
+      "us_service": "US Customer Service"
     },
     "404": {
       "title": "Page not found",
