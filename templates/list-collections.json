@@ -1,7 +1,42 @@
 {
   "sections": {
     "main": {
-      "type": "main-list-collections"
+      "type": "main-list-collections",
+      "blocks": {
+        "a92fd9db-4d14-41ef-b2f8-71ebee7ce59d": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "7a8a1a07-0340-447a-a226-a28e35e24182": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "27b65ef1-36d4-41a8-ade1-1234e3dcf67c": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "a92fd9db-4d14-41ef-b2f8-71ebee7ce59d",
+        "7a8a1a07-0340-447a-a226-a28e35e24182",
+        "27b65ef1-36d4-41a8-ade1-1234e3dcf67c"
+      ],
+      "settings": {
+        "show_default_collections": false,
+        "title": "Collections",
+        "sort": "alphabetical",
+        "image_ratio": "adapt",
+        "color_scheme": "background-1",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_vendor": true
+      }
     }
   },
   "order": [
