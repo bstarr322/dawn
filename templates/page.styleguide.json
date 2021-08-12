@@ -1,7 +1,8 @@
 {
   "sections": {
     "main": {
-      "type": "page-styleguide"
+      "type": "page-styleguide",
+      "settings": {}
     }
   },
   "order": [

@@ -23,9 +23,11 @@
         },
         "button": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "",
+            "button_type": "secondary"
           }
         }
       },
@@ -46,28 +48,235 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best Sellers",
+        "title": "",
+        "title_style": "utility",
         "collection": "best-sellers",
-        "products_to_show": 12,
-        "show_view_all": true,
-        "swipe_on_desktop": true,
+        "products_to_show": 4,
+        "products_offset": 0,
+        "show_view_all": false,
+        "swipe_on_desktop": false,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "add_image_padding": false,
         "show_vendor": true
       }
     },
+    "16288016520610e9b7": {
+      "type": "rich-text",
+      "blocks": {
+        "16288016520610e9b7-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "the artist",
+            "heading_size": "small"
+          }
+        },
+        "16288016520610e9b7-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After studying in the photography department of the Art Institute of Chicago, Johnson’s practice quickly expanded to embrace a wide range of media – including sculpture, painting, drawing, filmmaking, and installation – yielding a complex multidisciplinary practice that incorporates diverse materials rich with symbolism and personal history.<\/p>"
+          }
+        },
+        "16288016520610e9b7-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_type": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "16288016520610e9b7-0",
+        "16288016520610e9b7-1",
+        "16288016520610e9b7-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "show_bottom_border": false
+      }
+    },
+    "1628802773c0ec0c1b": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "title_style": "utility",
+        "collection": "best-sellers",
+        "products_to_show": 4,
+        "products_offset": 4,
+        "show_view_all": false,
+        "swipe_on_desktop": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_vendor": true
+      }
+    },
+    "1628802397a2cd706b": {
+      "type": "image-with-text",
+      "blocks": {
+        "1628802397a2cd706b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "About this product"
+          }
+        },
+        "1628802397a2cd706b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Founded in 2014 by Liz Swig, LIZWORKS collaborates with celebrated contemporary artists to create limited-edition pieces that reflect the moment and push the boundary between jewelry and art.LIZWORKS has collaborated with the celebrated American artist Rashid Johnson to create a collection of jewelry that draws upon his distinctive visual language. Images from Johnson’s ANXIOUS MEN series have been translated into gold and titanium cuffs, signet rings, ring bands, dog tag necklaces and pendants, all created in limited-editions.<\/p>"
+          }
+        },
+        "1628802397a2cd706b-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_type": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "1628802397a2cd706b-0",
+        "1628802397a2cd706b-1",
+        "1628802397a2cd706b-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/plp-alt-woman.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first",
+        "full_width": true
+      }
+    },
+    "1628803056b128aaca": {
+      "type": "image-with-text",
+      "blocks": {
+        "1628803056b128aaca-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "about the artist"
+          }
+        },
+        "1628803056b128aaca-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Born in Chicago in 1977, Rashid Johnson is among an influential cadre of contemporary American artists whose work employs a wide range of media to explore themes of art history, individual and shared cultural identities, personal narratives, literature, philosophy, materiality, and critical history. After studying in the photography department of the Art Institute of Chicago, Johnson’s practice quickly expanded to embrace a wide range of media – including sculpture, painting, drawing, filmmaking, and installation – yielding a complex multidisciplinary practice that incorporates diverse materials rich with symbolism and personal history.<\/p>"
+          }
+        },
+        "1628803056b128aaca-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "learn more",
+            "button_link": "",
+            "button_type": "underlined"
+          }
+        }
+      },
+      "block_order": [
+        "1628803056b128aaca-0",
+        "1628803056b128aaca-1",
+        "1628803056b128aaca-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/plp-alt-man.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first",
+        "full_width": true
+      }
+    },
     "banner": {
-      "type": "main-collection-banner"
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false
+      }
     },
     "product-grid": {
-      "type": "main-collection-product-grid"
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 16,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_vendor": false,
+        "enable_filtering": true,
+        "enable_sorting": true
+      }
+    },
+    "1628804116c8db72e1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Related Products",
+        "title_style": "h3",
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "products_offset": 0,
+        "show_view_all": false,
+        "swipe_on_desktop": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_vendor": true
+      }
+    },
+    "1628802781e0b05ea8": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "1628802781e0b05ea8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        },
+        "1628802781e0b05ea8-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "1628802781e0b05ea8-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1628802781e0b05ea8-0",
+        "1628802781e0b05ea8-1",
+        "1628802781e0b05ea8-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/plp-alt-man.jpg",
+        "image_2": "shopify:\/\/shop_images\/plp-alt-woman.jpg",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
     }
   },
   "order": [
     "image_text",
     "featured_products",
+    "16288016520610e9b7",
+    "1628802773c0ec0c1b",
+    "1628802397a2cd706b",
+    "1628803056b128aaca",
     "banner",
-    "product-grid"
+    "product-grid",
+    "1628804116c8db72e1",
+    "1628802781e0b05ea8"
   ]
 }

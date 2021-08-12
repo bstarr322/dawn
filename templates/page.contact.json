@@ -3,14 +3,16 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "form": {
       "type": "contact-form",
       "settings": {
         "heading": "Contact Us",
-        "image": "shopify:\/\/shop_images\/Rectangle_230.png"
+        "image": "shopify:\/\/shop_images\/Rectangle_230.png",
+        "uk_phone": "+44(0) 1749 814 060",
+        "us_phone": "+1 213 943 1660",
+        "email_desc": "Send us a message through our contact form below"
       }
     }
   },
