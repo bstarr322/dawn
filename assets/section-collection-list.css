@@ -158,3 +158,10 @@
     margin-left: calc(50vw - 720px);
   }
 }
+
+/* Collection Card */
+@media screen and (max-width: 749px) {
+  .card--collection .media {
+    padding-bottom: 64% !important;
+  }
+}
