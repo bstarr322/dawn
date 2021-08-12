@@ -28,13 +28,20 @@
             "button_link": "shopify:\/\/collections\/best-sellers",
             "button_type": "secondary"
           }
+        },
+        "c9e215d6-c6dd-4d42-a705-dd183a43a83f": {
+          "type": "price",
+          "settings": {
+            "price": "$10"
+          }
         }
       },
       "block_order": [
         "ddccf559-3b12-4cca-b23c-4edfef945dc5",
         "16258335436eb94c3b-0",
         "16258335436eb94c3b-1",
-        "16258335436eb94c3b-2"
+        "16258335436eb94c3b-2",
+        "c9e215d6-c6dd-4d42-a705-dd183a43a83f"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/hero.jpg",
@@ -88,13 +95,20 @@
             "button_link": "",
             "button_type": "secondary"
           }
+        },
+        "72d79831-df3b-4387-8c68-a79bdc77e57d": {
+          "type": "price",
+          "settings": {
+            "price": "$300.00"
+          }
         }
       },
       "block_order": [
         "abaa57e9-a6a8-4fd5-8a31-b2a8fa771cfc",
         "heading",
         "text",
-        "button"
+        "button",
+        "72d79831-df3b-4387-8c68-a79bdc77e57d"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/featured-image.jpg",
