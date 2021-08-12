@@ -4,21 +4,30 @@
 
 <div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div class="{% if section.settings.layout == 'page-width' %}page-width{% endif %}">
-    <div class="title-wrapper">
-      <h2 class="title utility">
-        {{ section.settings.title | escape }}
-      </h2>
-    </div>
     <swiperjs-component>
+      <div class="title-wrapper">
+        <h2 class="title utility">
+          {{ section.settings.title | escape }}
+        </h2>
+
+        <div class="slider-button-wrapper">
+          <div data-slider-previous>{%- render 'icon-arrow-left' -%}</div>
+          <div data-slider-next>{%- render 'icon-arrow' -%}</div>
+        </div>
+      </div>
+
       <div class="swiper-container"
         role="list"
         data-swiper-slider
         data-swiper-destroy="mobile-up"
-        data-slides-per-view="auto"
+        data-slides-per-view="2"
+        data-slides-per-view-mobile="2"
+        data-slides-per-view-tablet="2"
+        data-slides-per-column="2"
         data-slides-speed="600"
         >
 
-        <div class="multicolumn-list grid grid--2-col grid--2-col-tablet grid--{{ section.settings.columns_per_row }}-col-desktop"
+        <div class="multicolumn-list swiper-wrapper grid grid--2-col grid--2-col-tablet grid--{{ section.settings.columns_per_row }}-col-desktop"
           id="Slider-{{ section.id }}"
           role="list">
           

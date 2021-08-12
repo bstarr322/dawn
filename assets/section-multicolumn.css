@@ -1,6 +1,8 @@
 .multicolumn .title-wrapper {
-  padding-left: 3rem;
-  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
+  padding: 0 5rem;
+  margin-bottom: 4rem;
 }
 
 .multicolumn .title {
@@ -18,6 +20,17 @@
 }
 
 @media screen and (min-width: 750px) {
+  .multicolumn .title-wrapper {
+    padding-left: 3rem;
+    padding-right: 0;
+    margin-bottom: 2.3rem;
+    text-align: left;
+  }
+
+  .multicolumn .slider-button-wrapper {
+    display: none;
+  }
+
   .multicolumn.no-heading:not(.background-secondary) {
     margin-top: 6rem;
   }
@@ -43,6 +56,10 @@
   visibility: visible;
 }
 
+.multicolumn-card a {
+  text-decoration: none;
+}
+
 .multicolumn-card .button {
   position: absolute;
   margin: 0;
@@ -55,6 +72,7 @@
   transition: all ease 0.3s;
   justify-content: normal;
 }
+
 
 .multicolumn-list__item.center
   .multicolumn-card__image-wrapper:not(.multicolumn-card__image-wrapper--full-width),

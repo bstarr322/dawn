@@ -15,8 +15,11 @@
     </div>
 
     <swiperjs-component>
-      <div class="swiper-container" role="list" data-swiper-slider data-swiper-destroy="mobile-down"
-        data-slides-per-view="auto" data-slides-speed="600">
+      <div class="swiper-container" role="list"
+        data-swiper-slider
+        data-swiper-destroy="mobile-down"
+        data-slides-per-view="auto"
+        data-slides-speed="600">
     
         <div
           class="swiper-wrapper grid grid--2-col">
@@ -39,8 +42,13 @@
           {%- endfor -%}
     
           <div class="view-all-wrapper small-hide swiper-slide">
-            <a href="{{ section.settings.collection.url }}" class="button button--link">{{
-              'sections.featured_collection.view_all' | t }}</a>
+            <div>
+              {%- if title != blank -%}
+                <h3 class="utility">{{ title }}</h3>
+              {%- endif -%}
+              <a href="{{ section.settings.collection.url }}" class="link underlined-link color-subdued">{{
+                'sections.featured_collection.shop_all' | t }}</a>
+            </div>
           </div>
         </div>
     
@@ -50,5 +58,10 @@
         {% endcomment %}
       </div>
     </swiperjs-component>
+
+    <div class="center medium-up-hide">
+      <a href="{{ section.settings.collection.url }}" class="link underlined-link color-subdued">{{
+        'sections.featured_collection.shop_all' | t }}</a>
+    </div>
   </div>
 </div>
