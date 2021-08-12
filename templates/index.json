@@ -25,7 +25,8 @@
           "type": "button",
           "settings": {
             "button_label": "Explore Now",
-            "button_link": "shopify:\/\/collections\/best-sellers"
+            "button_link": "shopify:\/\/collections\/best-sellers",
+            "button_type": "secondary"
           }
         }
       },
@@ -47,8 +48,10 @@
       "type": "featured-collection",
       "settings": {
         "title": "Best Sellers",
+        "title_style": "utility",
         "collection": "best-sellers",
         "products_to_show": 12,
+        "products_offset": 0,
         "show_view_all": true,
         "swipe_on_desktop": true,
         "image_ratio": "adapt",
@@ -82,7 +85,8 @@
           "type": "button",
           "settings": {
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "",
+            "button_type": "secondary"
           }
         }
       },
@@ -106,18 +110,21 @@
         "16258335670345979c-0": {
           "type": "featured_collection",
           "settings": {
+            "title": "",
             "collection": "best-sellers"
           }
         },
         "16258335670345979c-1": {
           "type": "featured_collection",
           "settings": {
+            "title": "",
             "collection": "frontpage"
           }
         },
         "16258335670345979c-2": {
           "type": "featured_collection",
           "settings": {
+            "title": "",
             "collection": "best-sellers"
           }
         }
@@ -139,10 +146,12 @@
       "type": "featured-collection",
       "settings": {
         "title": "Best Sellers",
+        "title_style": "utility",
         "collection": "best-sellers",
         "products_to_show": 4,
+        "products_offset": 0,
         "show_view_all": true,
-        "swipe_on_desktop": false,
+        "swipe_on_desktop": true,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "add_image_padding": false,
@@ -168,7 +177,8 @@
           "type": "button",
           "settings": {
             "button_label": "Explore",
-            "button_link": "shopify:\/\/collections\/best-sellers"
+            "button_link": "shopify:\/\/collections\/best-sellers",
+            "button_type": "secondary"
           }
         }
       },
@@ -191,18 +201,21 @@
         "162695979530ada741-0": {
           "type": "featured_collection",
           "settings": {
+            "title": "",
             "collection": "best-sellers"
           }
         },
         "162695979530ada741-1": {
           "type": "featured_collection",
           "settings": {
+            "title": "",
             "collection": "best-sellers"
           }
         },
         "162695979530ada741-2": {
           "type": "featured_collection",
           "settings": {
+            "title": "",
             "collection": "frontpage"
           }
         }
