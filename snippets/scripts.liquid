@@ -1,0 +1,29 @@
+<script>
+  window.routes = {
+    cart_add_url: '{{ routes.cart_add_url }}',
+    cart_change_url: '{{ routes.cart_change_url }}',
+    cart_update_url: '{{ routes.cart_update_url }}'
+  };
+
+  window.cartStrings = {
+    error: `{{ 'sections.cart.cart_error' | t }}`,
+    quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t }}`
+  }
+
+  window.variantStrings = {
+    addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+    soldOut: `{{ 'products.product.sold_out' | t }}`,
+    unavailable: `{{ 'products.product.unavailable' | t }}`,
+  }
+</script>
+
+<!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="{{ 'flickity-slider.js' | asset_url }}" defer="defer"></script>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script src="{{ 'swiper-slider.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'collection-list.js' | asset_url }}" defer="defer"></script>
+<!-- <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script> -->
