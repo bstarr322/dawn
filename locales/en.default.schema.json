@@ -456,6 +456,9 @@
         "products_to_show": {
           "label": "Maximum products to show"
         },
+        "products_offset": {
+          "label": "Products Offset"
+        },
         "show_view_all": {
           "label": "Enable \"View all\" button if collection has more products than shown"
         },

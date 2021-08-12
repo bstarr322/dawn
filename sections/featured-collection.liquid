@@ -10,7 +10,7 @@
 
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
-<div class="featured-collection">
+<div class="featured-collection {% if section.settings.swipe_on_desktop %}featured-collection--carousel{% endif %}">
   <div class="center title-wrapper">
     <h2 class="utility title{% if section.settings.title == blank %} title--no-heading{% endif %}">{{ section.settings.title | escape }}</h2>
   </div>
@@ -26,15 +26,18 @@
   <swiperjs-component>
     <div class="swiper-container"
       role="list"
-      data-swiper-slider
-      data-swiper-destroy="mobile-down"
-      data-slides-per-view="auto"
-      data-slides-speed="600"
+
+      {%- if section.settings.swipe_on_desktop -%}
+        data-swiper-slider
+        data-swiper-destroy="mobile-down"
+        data-slides-per-view="auto"
+        data-slides-speed="600"
+      {%- endif -%}
       >
 
       <div class="swiper-wrapper grid grid--2-col{% if products_to_display == 4 or section.settings.collection == blank %} grid--2-col-tablet grid--4-col-desktop{% else %} grid--3-col-tablet{% endif %}{% if products_to_display > 5 %} grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}">
         
-        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show offset: section.settings.products_offset -%}
           <div class="grid__item swiper-slide">
             {% render 'product-card',
               product_card_product: product,
@@ -52,9 +55,11 @@
           {%- endfor -%}
         {%- endfor -%}
 
-        <div class="view-all-wrapper small-hide swiper-slide">
-          <a href="{{ section.settings.collection.url }}" class="button button--link">{{ 'sections.featured_collection.view_all' | t }}</a>
-        </div>
+        {%- if section.settings.show_view_all -%}
+          <div class="view-all-wrapper small-hide swiper-slide">
+            <a href="{{ section.settings.collection.url }}" class="button button--link">{{ 'sections.featured_collection.view_all' | t }}</a>
+          </div>
+        {%- endif -%}
       </div>
 
       {% comment %}
@@ -92,10 +97,19 @@
       "type": "range",
       "id": "products_to_show",
       "min": 2,
-      "max": 12,
-      "step": 2,
+      "max": 20,
+      "step": 1,
       "default": 4,
       "label": "t:sections.featured-collection.settings.products_to_show.label"
+    },
+    {
+      "type": "range",
+      "id": "products_offset",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 0,
+      "label": "t:sections.featured-collection.settings.products_offset.label"
     },
     {
       "type": "checkbox",
@@ -106,7 +120,7 @@
     {
       "type": "checkbox",
       "id": "swipe_on_desktop",
-      "default": false,
+      "default": true,
       "label": "Swipe on Desktop"
     },
     {

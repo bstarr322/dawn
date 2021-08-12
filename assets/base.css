@@ -1280,6 +1280,18 @@ deferred-media {
   transform: rotate(180deg);
 }
 
+.button--underlined {
+  color: var(--color-subdued);
+  text-decoration: underline;
+}
+
+.button--underlined:hover {
+  background: transparent;
+  color: var(--color-link);
+  text-decoration-thickness: 0.2rem;
+}
+
+
 .button--small {
   padding: 1.2rem 2.6rem;
 }

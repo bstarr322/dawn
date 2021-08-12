@@ -116,6 +116,7 @@
 @media screen and (min-width: 750px) {
   .collection-list-section {
     border-top: 1px solid var(--color-border);
+    /*border-bottom: 1px solid var(--color-border);*/
   }
 
   .collection-list__item:only-child > *:not(.card--media) {
