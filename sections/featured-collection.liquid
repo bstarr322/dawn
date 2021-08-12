@@ -11,8 +11,8 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
 <div class="featured-collection {% if section.settings.swipe_on_desktop %}featured-collection--carousel{% endif %}">
-  <div class="center title-wrapper">
-    <h2 class="utility title{% if section.settings.title == blank %} title--no-heading{% endif %}">{{ section.settings.title | escape }}</h2>
+  <div class="title-wrapper {% if section.settings.swipe_on_desktop %}center{% endif %}">
+    <h2 class="title{% if section.settings.title == blank %} title--no-heading{% endif %} {{ section.settings.title_style }}">{{ section.settings.title | escape }}</h2>
   </div>
 
   {%- liquid
@@ -87,6 +87,23 @@
       "id": "title",
       "default": "Featured collection",
       "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "options": [
+        { "value": "h1", "label": "h1" },
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" },
+        { "value": "h4", "label": "h4" },
+        { "value": "h5", "label": "h5" },
+        { "value": "h6", "label": "h6" },
+        { "value": "utility", "label": "Utility" },
+        { "value": "utility-large", "label": "Utility Large" },
+        { "value": "caption", "label": "Caption" }
+      ],
+      "default": "utility",
+      "label": "Title Style"
     },
     {
       "type": "collection",
