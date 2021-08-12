@@ -28,6 +28,15 @@
   display: block;
 }
 
+.footer-block__logo {
+  color: var(--color-white);
+}
+
+.footer-block__logo svg {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 750px) {
   .footer {
     padding: 4.5rem 3rem 4rem;
@@ -36,6 +45,11 @@
     margin-left: 0;
     row-gap: 6rem;
     margin-bottom: 0;
+  }
+
+  .footer-block__logo svg {
+    width: auto;
+    height: auto;
   }
 
   .footer__content-top .grid__item {
