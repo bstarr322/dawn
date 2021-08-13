@@ -12,8 +12,13 @@
 }
 
 .product__info-wrapper {
+  padding-left: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.product__media-wrapper .grid__item {
   padding-left: 0;
-  padding-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 749px) {
@@ -30,7 +35,9 @@
   }
 
   .product__info-wrapper {
-    padding-left: 5rem;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .product__media-container .slider-buttons {
@@ -40,14 +47,20 @@
 
 @media screen and (min-width: 990px) {
   .product:not(.product--no-media) .product__media-wrapper {
-    max-width: 64%;
-    width: calc(64% - 1rem / 2);
+    max-width: 50%;
+    width: calc(50% - 1rem / 2);
   }
 
   .product:not(.product--no-media) .product__info-wrapper {
-    padding-left: 4rem;
-    max-width: 36%;
-    width: calc(36% - 1rem / 2);
+    max-width: 50%;
+    width: calc(50% - 1rem / 2);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .product:not(.product--no-media) .product__info-wrapper {
+    padding-left: 12rem;
+    padding-right: 12rem;
   }
 }
 
@@ -139,14 +152,14 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type='radio'] + label {
   border: 0.1rem solid rgba(var(--color-foreground), 0.55);
-  border-radius: 4rem;
   background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
   font-size: 1.4rem;
-  letter-spacing: 0.1rem;
+  font-style: italic;
+  letter-spacing: 0.03rem;
   line-height: 1;
   text-align: center;
   transition: border var(--duration-short) ease;
@@ -158,8 +171,8 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio']:checked + label {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+  color: rgb(var(--color-ink));
+  border: 1px solid var(--color-ink);
 }
 
 .product-form__input input[type='radio']:disabled + label {
@@ -208,13 +221,13 @@ fieldset.product-form__input .form__label {
 /* Product info */
 
 .product__info-container > * + * {
-  margin: 1.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .product__info-container .product-form,
 .product__info-container .product__description,
 .product__info-container .share-button {
-  margin: 2.5rem 0;
+  margin: 2rem 0;
 }
 
 .product__text {
@@ -233,7 +246,7 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .product__title + .product__text.caption-with-letter-spacing {
@@ -242,10 +255,6 @@ a.product__text {
 
 .product__text.caption-with-letter-spacing + .product__title {
   margin-top: 0;
-}
-
-.product__accordion .accordion__content {
-  padding: 0 1rem;
 }
 
 .product .price {

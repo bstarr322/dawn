@@ -1,0 +1,22 @@
+<!-- CSS -->
+{%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+  <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+{%- endunless -%}
+
+<link rel="stylesheet" href="https://use.typekit.net/lhv1eyh.css">
+
+{% comment %}
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{% endcomment %}
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+{{ 'base.css' | asset_url | stylesheet_tag }}
+{{ 'custom.scss.css' | asset_url | stylesheet_tag }}
+
+{%- unless settings.type_body_font.system? -%}
+  <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+{%- endunless -%}
+{%- unless settings.type_header_font.system? -%}
+  <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+{%- endunless -%}

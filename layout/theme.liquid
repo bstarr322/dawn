@@ -12,10 +12,6 @@
       <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
     {%- endif -%}
 
-    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-    {%- endunless -%}
-
     <title>{{ page_title }}</title>
 
     {% if page_description %}
@@ -28,24 +24,9 @@
     
     {{ content_for_header }}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://use.typekit.net/lhv1eyh.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
     {%- render 'css-variables' -%}
+    {%- render 'styles' -%}
     
-    {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'custom.scss.css' | asset_url | stylesheet_tag }}
-
-    {%- unless settings.type_body_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-    {%- unless settings.type_header_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
   </head>
 
@@ -67,34 +48,6 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
 
-    <script>
-      window.routes = {
-        cart_add_url: '{{ routes.cart_add_url }}',
-        cart_change_url: '{{ routes.cart_change_url }}',
-        cart_update_url: '{{ routes.cart_update_url }}'
-      };
-
-      window.cartStrings = {
-        error: `{{ 'sections.cart.cart_error' | t }}`,
-        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t }}`
-      }
-
-      window.variantStrings = {
-        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
-        soldOut: `{{ 'products.product.sold_out' | t }}`,
-        unavailable: `{{ 'products.product.unavailable' | t }}`,
-      }
-    </script>
-
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="{{ 'flickity-slider.js' | asset_url }}" defer="defer"></script>
-
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script src="{{ 'swiper-slider.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'collection-list.js' | asset_url }}" defer="defer"></script>
-    <!-- <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script> -->
+    {%- render 'scripts' -%}
   </body>
 </html>

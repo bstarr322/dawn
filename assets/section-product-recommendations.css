@@ -3,6 +3,20 @@
 }
 
 .product-recommendations__heading {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
   margin: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .product-recommendations__heading  {
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .product-recommendations__heading  {
+    margin-left: calc(50vw - 72rem);
+  }
 }

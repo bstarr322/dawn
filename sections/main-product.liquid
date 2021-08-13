@@ -18,7 +18,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-<section class="page-width">
+<section>
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     {%- render 'main-product-media', section: section -%}
     {%- render 'main-product-info', section: section -%}
@@ -73,7 +73,7 @@
 {
   "name": "t:sections.main-product.name",
   "tag": "section",
-  "class": "product-section spaced-section",
+  "class": "product-section",
   "blocks": [
     {
       "type": "@app"
@@ -172,6 +172,12 @@
           "default": "Collapsible tab",
           "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_description",
+          "label": "Use Product Description",
+          "default": false
         },
         {
           "type": "richtext",

@@ -17,6 +17,7 @@ class SwiperJsComponent extends HTMLElement {
 
     if (typeof swiperDestroy === 'undefined' || (swiperDestroy === 'mobile-down' && window.innerWidth >= 750) || (swiperDestroy === 'mobile-up' && window.innerWidth < 750)) {
       this.sliderInstance = this.initSlider(this.slider)
+      this.initEvents();
 
       window.addEventListener('resize', () => {
         if (swiperDestroy == 'mobile-down' && window.innerWidth < 750 && typeof this.sliderInstance !== 'undefined') {
@@ -24,6 +25,7 @@ class SwiperJsComponent extends HTMLElement {
         } else {
           if (typeof this.sliderInstance === 'undefined' || this.sliderInstance === null || this.sliderInstance.destroyed) {
             this.sliderInstance = this.initSlider(this.slider)
+            this.initEvents();
           }
         }
       });
@@ -31,13 +33,14 @@ class SwiperJsComponent extends HTMLElement {
   }
 
   initSlider() {
-    const { swiperDestroy, slidesPerView, slidesPerViewTablet, slidesPerViewMobile, slidesGroup, slidesSpeed, slidesSpeedMobile, slidesLoop, slidesThumbs } = this.slider.dataset;
+    const { swiperDestroy, slidesPerView, slidesPerColumn, slidesPerViewTablet, slidesPerViewMobile, slidesGroup, slidesSpeed, slidesSpeedMobile, slidesLoop, slidesThumbs } = this.slider.dataset;
     const settings = {
       // Optional parameters
       speed: parseInt(slidesSpeed) || 300,
       loop: slidesLoop == 'true' ? true : false,
       spaceBetween: 0,
-      slidesPerView: slidesPerViewMobile || 1,
+      slidesPerView: parseInt(slidesPerViewMobile) || 1,
+      slidesPerColumn: parseInt(slidesPerColumn) || 1,
       breakpoints: {
         320: {
           speed: parseInt(slidesSpeedMobile) || 300,
@@ -82,19 +85,19 @@ class SwiperJsComponent extends HTMLElement {
   }
 
   initEvents() {
-    // // previous
-    // if(this.previousButton != null) {
-    //   this.previousButton.addEventListener('click', () => {
-    //     this.flickityInstance.previous(true);
-    //   });
-    // }
+    // previous
+    if(this.previousButton != null) {
+      this.previousButton.addEventListener('click', () => {
+        this.sliderInstance.slidePrev();
+      });
+    }
 
-    // // next
-    // if(this.nextButton != null) {
-    //   this.nextButton.addEventListener('click', () => {
-    //     this.flickityInstance.next(true);
-    //   });
-    // }
+    // next
+    if(this.nextButton != null) {
+      this.nextButton.addEventListener('click', () => {
+        this.sliderInstance.slideNext();
+      });
+    }
   }
 }
 

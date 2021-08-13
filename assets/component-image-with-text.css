@@ -31,7 +31,7 @@
 .image-with-text__media {
   background-color: transparent;
   min-height: 100%;
-  min-height: calc(100vh - 12rem);
+  height: 83vw;
 }
 
 .image-with-text__media--small {
@@ -43,6 +43,10 @@
 }
 
 @media screen and (min-width: 750px) {
+  .image-with-text__media {
+    height: 48rem;
+  }
+
   .image-with-text__media--small {
     height: 31.4rem;
   }
@@ -153,7 +157,17 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .image-with-text__media {
+    height: 60rem;
+  }
+}
+
 @media screen and (min-width: 1500px) {
+  .image-with-text__media {
+    min-height: calc(100vh - 12rem);
+  }
+
   .image-with-text__content {
     padding: 6rem 3rem;
     margin-left: calc(50vw - 720px);

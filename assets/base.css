@@ -1,3 +1,16 @@
+/* Text Alignment */
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
 /* Color custom properties */
 .color-ink {
   color: var(--color-ink) !important;
@@ -400,6 +413,8 @@ h3,
   font-family: var(--font-body-family);
   font-size: 2.5rem;
   font-style: italic;
+  font-weight: 400;
+  text-transform: none;
 }
 
 @media only screen and (min-width: 750px) {
@@ -440,6 +455,7 @@ h6,
   font-size: 1.5rem;
   font-weight: 600;
   font-style: normal;
+  text-transform: none;
 }
 
 @media only screen and (min-width: 750px) {
@@ -1266,6 +1282,18 @@ deferred-media {
   margin-left: 0;
   transform: rotate(180deg);
 }
+
+.button--underlined {
+  color: var(--color-subdued);
+  text-decoration: underline;
+}
+
+.button--underlined:hover {
+  background: transparent;
+  color: var(--color-link);
+  text-decoration-thickness: 0.2rem;
+}
+
 
 .button--small {
   padding: 1.2rem 2.6rem;

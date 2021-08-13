@@ -6,37 +6,64 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text_style": "uppercase",
             "text": "{{ product.vendor }}"
           }
         },
         "title": {
-          "type": "title"
+          "type": "title",
+          "settings": {}
         },
         "subtitle": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "text": "{{ product.metafields.descriptors.subtitle.value }}"
           }
         },
         "price": {
-          "type": "price"
+          "type": "price",
+          "settings": {}
         },
         "variant_picker": {
-          "type": "variant_picker"
-        },
-        "quantity_selector": {
-          "type": "quantity_selector"
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
         },
         "buy_buttons": {
-          "type": "buy_buttons"
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
         },
-        "description": {
-          "type": "description"
+        "15f61849-1a10-4699-ba9c-bf0a0b5c196d": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Description",
+            "use_description": true,
+            "content": "",
+            "page": "",
+            "icon": "none"
+          }
         },
-        "share": {
-          "type": "share"
+        "f67d0080-2226-4ca5-98cb-6cfa09cf26ef": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "use_description": false,
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.<br\/><br\/><\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "ab91628e-99e2-4155-a0f2-addf9954711e": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping and Returns",
+            "use_description": false,
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.<\/p>",
+            "page": "",
+            "icon": "none"
+          }
         }
       },
       "block_order": [
@@ -45,18 +72,135 @@
         "subtitle",
         "price",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
-        "description",
-        "share"
-      ]
+        "15f61849-1a10-4699-ba9c-bf0a0b5c196d",
+        "f67d0080-2226-4ca5-98cb-6cfa09cf26ef",
+        "ab91628e-99e2-4155-a0f2-addf9954711e"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "enable_video_looping": false
+      }
+    },
+    "1628882249bbba56d2": {
+      "type": "collage",
+      "blocks": {
+        "1628882249bbba56d2-0": {
+          "type": "video",
+          "settings": {
+            "cover_image": "shopify:\/\/shop_images\/video-banner.jpg",
+            "video_url": "https:\/\/vimeo.com\/341047390",
+            "description": "Describe the video for customers using screen readers",
+            "image_padding": false
+          }
+        },
+        "1628882249bbba56d2-1": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "test-product",
+            "secondary_background": false,
+            "second_image": false,
+            "image_padding": false
+          }
+        },
+        "1628882249bbba56d2-2": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "best-sellers",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "1628882249bbba56d2-0",
+        "1628882249bbba56d2-1",
+        "1628882249bbba56d2-2"
+      ],
+      "settings": {
+        "heading": "",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
     },
     "product-recommendations": {
-      "type": "product-recommendations"
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "More from the Artist",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_vendor": true
+      }
+    },
+    "16288893503b2a9976": {
+      "type": "image-with-text",
+      "blocks": {
+        "f149d3a4-8a97-4c32-8ea5-79a73bbcce80": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "The artist"
+          }
+        },
+        "16288893503b2a9976-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.artist.name.value }}"
+          }
+        },
+        "16288893503b2a9976-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.artist.info | metafield_tag }}<\/p>"
+          }
+        },
+        "16288893503b2a9976-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "",
+            "button_type": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "f149d3a4-8a97-4c32-8ea5-79a73bbcce80",
+        "16288893503b2a9976-0",
+        "16288893503b2a9976-1",
+        "16288893503b2a9976-2"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.artist.image.value }}",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first",
+        "full_width": true
+      }
+    },
+    "1628889265e2fd4f27": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Update your collection with one of our best sellers",
+        "title_style": "h3",
+        "collection": "best-sellers",
+        "products_to_show": 4,
+        "products_offset": 0,
+        "show_view_all": false,
+        "swipe_on_desktop": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_vendor": false
+      }
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "1628882249bbba56d2",
+    "product-recommendations",
+    "16288893503b2a9976",
+    "1628889265e2fd4f27"
   ]
 }
