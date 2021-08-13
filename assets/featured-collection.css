@@ -3,6 +3,11 @@
   overflow-x: hidden;
 }
 
+.featured-collection .title-wrapper {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .featured-collection .title-wrapper.center {
   padding-left: 0;
 }

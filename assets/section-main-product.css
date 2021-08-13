@@ -12,8 +12,8 @@
 }
 
 .product__info-wrapper {
-  padding-left: 0;
-  padding-bottom: 0;
+  padding-left: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .product__media-wrapper .grid__item {
@@ -35,7 +35,9 @@
   }
 
   .product__info-wrapper {
-    padding-left: 5rem;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .product__media-container .slider-buttons {
@@ -50,9 +52,6 @@
   }
 
   .product:not(.product--no-media) .product__info-wrapper {
-    padding-top: 5rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
     max-width: 50%;
     width: calc(50% - 1rem / 2);
   }
