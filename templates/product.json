@@ -82,29 +82,21 @@
         "enable_video_looping": false
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-        "heading": "You may also like",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_vendor": false
-      }
-    },
     "1628882249bbba56d2": {
       "type": "collage",
       "blocks": {
         "1628882249bbba56d2-0": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "cover_image": "shopify:\/\/shop_images\/video-banner.jpg",
+            "video_url": "https:\/\/vimeo.com\/341047390",
             "description": "Describe the video for customers using screen readers",
             "image_padding": false
           }
         },
         "1628882249bbba56d2-1": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "test-product",
             "secondary_background": false,
@@ -114,6 +106,7 @@
         },
         "1628882249bbba56d2-2": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "best-sellers",
             "image_padding": false,
@@ -127,25 +120,19 @@
         "1628882249bbba56d2-2"
       ],
       "settings": {
-        "heading": "Multimedia collage",
+        "heading": "",
         "desktop_layout": "left",
         "mobile_layout": "collage"
       }
     },
-    "1628889012bbfc2a01": {
-      "type": "featured-collection",
+    "product-recommendations": {
+      "type": "product-recommendations",
       "settings": {
-        "title": "More from the Artist",
-        "title_style": "h3",
-        "collection": "best-sellers",
-        "products_to_show": 4,
-        "products_offset": 0,
-        "show_view_all": false,
-        "swipe_on_desktop": false,
+        "heading": "More from the Artist",
         "image_ratio": "adapt",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "add_image_padding": false,
-        "show_vendor": false
+        "show_vendor": true
       }
     },
     "16288893503b2a9976": {
@@ -211,9 +198,8 @@
   },
   "order": [
     "main",
-    "product-recommendations",
     "1628882249bbba56d2",
-    "1628889012bbfc2a01",
+    "product-recommendations",
     "16288893503b2a9976",
     "1628889265e2fd4f27"
   ]
