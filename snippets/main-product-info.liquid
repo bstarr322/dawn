@@ -46,7 +46,7 @@
               {%- if block.settings.use_description -%}
                 {{- product.description -}}
               {%- endif -%}
-              
+
               {{ block.settings.content }}
               {{ block.settings.page.content }}
             </div>
@@ -121,7 +121,7 @@
             <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
               {%- for option in product.options_with_values -%}
                   <fieldset class="js product-form__input">
-                    <legend class="form__label">{{ option.name }}</legend>
+                    <legend class="form__label utility">{{ option.name }}:</legend>
                     {%- for value in option.values -%}
                       <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                             name="{{ option.name }}"
@@ -139,6 +139,34 @@
                 {{ product.variants | json }}
               </script>
             </variant-radios>
+
+            {% comment %}
+            <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+              {%- for option in product.options_with_values -%}
+                {%- if option.name == 'Edition' -%}
+                <div class="product-form__input product-form__input--dropdown">
+                  <label class="form__label utility" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+                    {{ option.name }}
+                  </label>
+                  <div class="select">
+                    <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                      class="select__select"
+                      name="options[{{ option.name | escape }}]"
+                      form="product-form-{{ section.id }}"
+                    >
+                      {%- for value in option.values -%}
+                        <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                          {{ value }}
+                        </option>
+                      {%- endfor -%}
+                    </select>
+                    {% render 'icon-caret' %}
+                  </div>
+                </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </variant-selects>
+            {% endcomment %}
           {%- else -%}
             <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
               {%- for option in product.options_with_values -%}
