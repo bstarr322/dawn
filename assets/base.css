@@ -1511,6 +1511,7 @@ deferred-media {
 .customer .field label {
   font-family: var(--font-heading-family);
   font-size: 12px;
+  font-weight: 700;
   line-height: 20px;
   left: 0;
   top: 2rem;

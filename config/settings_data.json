@@ -5,14 +5,16 @@
     "colors_text": "#222222",
     "colors_outline_button_labels": "#222222",
     "colors_background_2": "#f9f9f9",
-    "social_twitter_link": "tttt",
-    "social_facebook_link": "tttt",
+    "sale_badge_color_scheme": "grey",
+    "social_facebook_link": "https:\/\/www.facebook.com\/hauserwirth\/",
+    "social_twitter_link": "https:\/\/twitter.com\/hauserwirth",
     "social_pinterest_link": "",
-    "social_instagram_link": "tttt",
-    "social_tiktok_link": "tt",
+    "social_instagram_link": "https:\/\/www.instagram.com\/hauserwirth\/",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCmwkuoCJOD681XWL_3joE5w",
+    "social_wechat_link": "Wechat",
+    "social_tiktok_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "tt",
     "social_vimeo_link": "",
     "sections": {
       "announcement-bar": {
@@ -30,11 +32,30 @@
         "block_order": [
           "announcement-bar-0"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "1c9e718c-5d73-4365-bb36-fa68e1399136": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "Accessories",
+              "show_menu_title": false,
+              "push_1_image": "shopify:\/\/shop_images\/image-blankets.jpg",
+              "push_1_heading": "Pillows",
+              "push_1_button_label": "",
+              "push_1_url": "shopify:\/\/collections",
+              "push_2_image": "shopify:\/\/shop_images\/image-artists.jpg",
+              "push_2_heading": "Scarves",
+              "push_2_button_label": "",
+              "push_2_url": "shopify:\/\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "1c9e718c-5d73-4365-bb36-fa68e1399136"
+        ],
         "settings": {
           "logo_width": 100,
           "logo_position": "middle-left",
@@ -69,7 +90,7 @@
           "color_scheme": "background-1",
           "footer_background": "#222222",
           "newsletter_enable": true,
-          "newsletter_heading": "Sign up to our emails",
+          "newsletter_heading": "Be the first to receive updates",
           "show_social": true,
           "social_heading": "Join us online",
           "enable_country_selector": true,
@@ -80,8 +101,6 @@
         }
       }
     },
-    "content_for_index": [
-
-    ]
+    "content_for_index": []
   }
 }

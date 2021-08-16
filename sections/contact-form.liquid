@@ -61,7 +61,8 @@
             </small>
           {%- endif -%}
         </div>
-        <div class="field">
+        <div class="field--message">
+          <label class="utility" for="ContactForm-body">{{ 'templates.contact.form.message' | t }}</label>
           <textarea
             rows="10"
             id="ContactForm-body"
@@ -71,7 +72,6 @@
           >
             {{- form.body -}}
           </textarea>
-          <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.message' | t }}</label>
         </div>
         <div class="contact__button">
           <button type="submit" class="button button--secondary">
