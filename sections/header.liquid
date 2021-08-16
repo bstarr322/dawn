@@ -103,51 +103,58 @@
     {%- endif -%}
 
     {%- if section.settings.menu != blank -%}
+
+      {%- assign mega_menu_names = '' -%}
+
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'mega_menu' -%}
+          {%- assign trim_mega_menu_name = block.settings.navigation_mega_menu | strip -%}
+          {%- assign mega_menu_names = mega_menu_names | append: trim_mega_menu_name | append: ',' -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- assign mega_menu_names = mega_menu_names | downcase | split: ',' | compact -%}
+
       <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
-            <li>
-              {%- if link.links != blank -%}
-                <details-disclosure>
-                  <details>
-                    <summary class="header__menu-item list-menu__item link focus-inset">
-                      <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                      {% render 'icon-caret' %}
-                    </summary>
-                    <ul class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1">
-                      {%- for childlink in link.links -%}
-                        <li>
-                          {%- if childlink.links == blank -%}
-                            <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                              {{ childlink.title | escape }}
-                            </a>
-                          {%- else -%}
-                            <details>
-                              <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large">
-                                {{ childlink.title | escape }}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <ul class="header__submenu list-menu motion-reduce">
-                                {%- for grandchildlink in childlink.links -%}
-                                  <li>
-                                    <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                      {{ grandchildlink.title | escape }}
-                                    </a>
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                            </details>
-                          {%- endif -%}
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  </details>
-                </details-disclosure>
-              {%- else -%}
-                <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                  <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                </a>
+            {%- assign downcased_link_title = link.title | downcase | strip -%}
+            {%- assign use_mega_menu = false -%}
+
+            {%- capture menu_item_dropdown -%}
+              {%- if mega_menu_names contains downcased_link_title -%}
+                {%- for block in section.blocks -%}
+                  {%- assign downcased_mega_menu_name = block.settings.navigation_mega_menu | downcase -%}
+
+                  {%- if downcased_mega_menu_name != downcased_link_title -%}
+                    {%- continue -%}
+                  {%- endif -%}
+
+                  {%- assign use_mega_menu = true -%}
+                  {%- if block.type == 'mega_menu' -%}
+                    {%-
+                      render 'megamenu'
+                      block: block
+                      link: link
+                    -%}
+                  {%- endif -%}
+
+                {%- endfor -%}
+              {%- elsif link.links != blank -%}
+                {%- render 'dropdown-menu' link: link -%}
               {%- endif -%}
+            {%- endcapture -%}
+
+            {% comment %}
+              {%- render 'menu-item', link: link, section: section -%}
+            {% endcomment %}
+
+            <li>
+              <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+              </a>
+
+              {{- menu_item_dropdown -}}
             </li>
           {%- endfor -%}
         </ul>
@@ -373,6 +380,69 @@
       "default": true,
       "label": "t:sections.header.settings.enable_sticky_header.label",
       "info": "t:sections.header.settings.enable_sticky_header.info"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "mega_menu",
+      "name": "Mega menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "navigation_mega_menu",
+          "label": "Menu item",
+          "info": "Enter menu item to apply a mega menu dropdown. [Learn more](http://support.maestrooo.com/article/149-navigation-enabling-and-configuring-mega-menu)."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_menu_title",
+          "label": "Show Menu Titles",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Image push 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "push_1_image",
+          "label": "Image",
+          "info": "740 x 460 px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "push_1_heading",
+          "label": "Heading",
+          "default": "Featured Collection"
+        },
+        {
+          "type": "url",
+          "id": "push_1_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Image push 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "push_2_image",
+          "label": "Image",
+          "info": "740 x 460 px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "push_2_heading",
+          "label": "Heading",
+          "default": "Featured Collection"
+        },
+        {
+          "type": "url",
+          "id": "push_2_url",
+          "label": "Button Link"
+        }
+      ]
     }
   ]
 }

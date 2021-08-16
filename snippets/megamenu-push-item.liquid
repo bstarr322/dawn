@@ -1,0 +1,38 @@
+{% capture id_url %}push_{{ index }}_url{% endcapture %}
+{% capture id_image %}push_{{ index }}_image{% endcapture %}
+{% capture id_heading %}push_{{ index }}_heading{% endcapture %}
+{% capture id_button_label %}push_{{ index }}_button_label{% endcapture %}
+
+{% assign push_url = block.settings[id_url] %}
+{% assign push_image = block.settings[id_image] %}
+{% assign push_heading = block.settings[id_heading] %}
+{% assign push_button_label = block.settings[id_button_label] %}
+
+{%- if push_image != blank -%}
+  <div class="megamenu__push">
+    {%- assign max_width = 370 | at_most: push_image.width -%}
+
+    {%- if push_url != blank -%}
+      <a  href="{{ push_url }}" >
+    {%- endif -%}
+
+    <div class="image-wrapper" style="background: url({{ push_image | img_url: '1x1', format: 'jpg' }}); max-width: {{ max_width }}px; --aspect-ratio: {{ push_image.aspect_ratio }}">
+      <img class=""
+          data-src="{{ push_image | img_url: '370x230', scale: 2 }}"
+          alt="{{ push_image.alt | escape }}">
+
+      <span class="Image__Loader"></span>
+    </div>
+
+    {%- if push_heading != blank -%}
+      <div class="megamenu__push__content">
+        <p class="">{{ push_heading | escape }}</p>
+      </div>
+    {%- endif -%}
+
+    {%- if push_url != blank -%}
+      </a>
+    {%- endif -%}
+    
+  </div>
+{%- endif -%}

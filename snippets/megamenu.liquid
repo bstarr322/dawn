@@ -1,0 +1,34 @@
+<div class="megamenu megamenu--primary" aria-hidden="true" {{ block.shopify_attributes }}>
+  <div class="megamenu__inner">
+    <div class="megamenu__links">
+      {%- for sub_link in link.links -%}
+        <div class="megamenu__link-column">
+          <div class="megamenu__item">
+            {%- if block.settings.show_menu_title -%}
+              <a href="{{ sub_link.url }}" class="megamenu__title">{{ sub_link.title | title }}</a>
+            {%- endif -%}
+
+            {%- if sub_link.links != blank -%}
+              <ul class="list-menu">
+                {%- for sub_sub_link in sub_link.links -%}
+                  <li class="">
+                    <a href="{{ sub_sub_link.url }}" class="{{ block.settings.menu_link_size }}">{{ sub_sub_link.title | escape }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="megamenu__push-wrapper">
+      {%- for i in (1..2) -%}
+        {%- render 'megamenu-push-item'
+          block: block
+          index: i
+        -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
