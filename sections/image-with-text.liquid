@@ -30,15 +30,15 @@
       </div>
     </div>
     <div class="grid__item image-with-text__content-wrapper">
-      <div class="image-with-text__content image-with-text__content--{{ section.settings.height }}">
+      <div class="image-with-text__content image-with-text__content--{{ section.settings.height }} {{ section.settings.text_alignment }}">
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'sub_heading' -%}
-              <span class="image-with-text__subheading caption" {{ block.shopify_attributes }}>
+              <span class="image-with-text__subheading {{ block.settings.subheading_style }}" {{ block.shopify_attributes }}>
                 {{ block.settings.sub_heading | escape }}
               </span>
             {%- when 'heading' -%}
-              <h2 class="image-with-text__heading h5" {{ block.shopify_attributes }}>
+              <h2 class="image-with-text__heading {{ block.settings.heading_style }}" {{ block.shopify_attributes }}>
                 {{ block.settings.heading | escape }}
               </h2>
             {%- when 'text' -%}
@@ -145,6 +145,17 @@
       "id": "full_width",
       "default": true,
       "label": "t:sections.image-with-text.settings.full_width.label"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Text Alignment"
     }
   ],
   "blocks": [
@@ -158,6 +169,24 @@
           "id": "sub_heading",
           "default": "Sub Heading",
           "label": "t:sections.image-with-text.blocks.sub_heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "subheading_style",
+          "options": [
+            { "value": "h0", "label": "h0" },
+            { "value": "h1", "label": "h1" },
+            { "value": "h2", "label": "h2" },
+            { "value": "h3", "label": "h3" },
+            { "value": "h4", "label": "h4" },
+            { "value": "h5", "label": "h5" },
+            { "value": "h6", "label": "h6" },
+            { "value": "utility", "label": "Utility" },
+            { "value": "utility-large", "label": "Utility Large" },
+            { "value": "caption", "label": "Caption" }
+          ],
+          "default": "caption",
+          "label": "Subheading Style"
         }
       ]
     },
@@ -171,6 +200,24 @@
           "id": "heading",
           "default": "Image with text",
           "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_style",
+          "options": [
+            { "value": "h0", "label": "h0" },
+            { "value": "h1", "label": "h1" },
+            { "value": "h2", "label": "h2" },
+            { "value": "h3", "label": "h3" },
+            { "value": "h4", "label": "h4" },
+            { "value": "h5", "label": "h5" },
+            { "value": "h6", "label": "h6" },
+            { "value": "utility", "label": "Utility" },
+            { "value": "utility-large", "label": "Utility Large" },
+            { "value": "caption", "label": "Caption" }
+          ],
+          "default": "h5",
+          "label": "Heading Style"
         }
       ]
     },

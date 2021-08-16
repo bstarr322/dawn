@@ -42,4 +42,8 @@
   .featured-collection--carousel {
     margin-left: calc(50vw - 72rem);
   }
+  
+  .featured-collection--carousel .title-wrapper {
+    margin-left: 0;
+  }
 }

@@ -366,12 +366,16 @@ h5,
 }
 
 .h0 {
-  font-size: 4rem;
+  font-size: 6rem;
+  line-height: .5;
 }
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: 5.2rem;
+    font-size: 10rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 }
 
@@ -2292,5 +2296,24 @@ details-disclosure > details {
 @media screen and (min-width: 990px) {
   .overflow-hidden-tablet {
     overflow: auto;
+  }
+}
+
+.template-404 .image-with-text__content {
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 3.5rem;
+  text-align: center;
+}
+
+.template-404 .image-with-text .button {
+  margin: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .template-404 .image-with-text__content {
+    align-items: flex-start;
+    padding-top: 6rem 3rem;
+    text-align: left;
   }
 }
