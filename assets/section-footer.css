@@ -465,6 +465,10 @@ footer details[open] summary ~ * {
   .footer-block-image {
     text-align: center;
   }
+
+  .copyright__content .link--text:nth-child(3) {
+    padding-left: 0;
+  }
 }
 
 .footer-block-image > img {

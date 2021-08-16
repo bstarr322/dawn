@@ -628,6 +628,15 @@
       }
     }
   }
+
+  .addresses {
+    .field {
+      .select {
+        margin-top: 25px;
+        border-bottom: 2px solid var(--color-ink);
+      }
+    }
+  }
 }
 
 // Featured Collections with Products
@@ -735,7 +744,11 @@
   .button--secondary {
     display: flex;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
+
+    @media screen and (min-width: 750px) {
+      justify-content: flex-start;
+    }
   }
 
   .image-wrapper {
@@ -786,7 +799,11 @@
   .button--secondary {
     display: flex;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
+
+    @media screen and (min-width: 750px) {
+      justify-content: flex-start;  
+    }
   }
 
   .image-wrapper {
@@ -880,7 +897,7 @@
 
 	.text-area {
 		border: 2px solid	var(--color-ink);
-    margin-top: 40px;
+    margin-top: 43px;
     padding: 0.5rem;
 	}
 
