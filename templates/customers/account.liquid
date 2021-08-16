@@ -173,7 +173,7 @@
                 <input type="text" id="AddressCityNew" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
                 <label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
               </div>
-              <div>
+              <div class="field">
                 <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
                 <div class="select">
                   <select
@@ -189,7 +189,7 @@
                   </svg>
                 </div>
               </div>
-              <div id="AddressProvinceContainerNew" style="display: none">
+              <div id="AddressProvinceContainerNew" style="display: none" class="field">
                 <label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
                 <div class="select">
                   <select
@@ -278,7 +278,7 @@
                     <input type="text" id="AddressCity_{{ form.id }}" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
                     <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
                   </div>
-                  <div>
+                  <div class="field">
                     <label for="AddressCountry_{{ form.id }}">
                       {{ 'customer.addresses.country' | t }}
                     </label>
@@ -298,7 +298,7 @@
                       </svg>
                     </div>
                   </div>
-                  <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
+                  <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;" class="field">
                     <label for="AddressProvince_{{ form.id }}">
                       {{ 'customer.addresses.province' | t }}
                     </label>
