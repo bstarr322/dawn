@@ -2,10 +2,77 @@
   "sections": {
     "main": {
       "type": "main-404",
+      "disabled": true,
       "settings": {}
+    },
+    "162913543808a84373": {
+      "type": "image-with-text",
+      "blocks": {
+        "162913543808a84373-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "404",
+            "heading_style": "h0"
+          }
+        },
+        "c613430f-d8f3-4d7b-bd29-71b5f7944383": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "Page not Found.",
+            "subheading_style": "h5"
+          }
+        },
+        "162913543808a84373-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We couldn’t find the page you were looking for. Browse our categories below or head back to the home page.<\/p>"
+          }
+        },
+        "162913543808a84373-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Back to Shopping",
+            "button_link": "shopify:\/\/collections",
+            "button_type": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "162913543808a84373-0",
+        "c613430f-d8f3-4d7b-bd29-71b5f7944383",
+        "162913543808a84373-1",
+        "162913543808a84373-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_2.png",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first",
+        "full_width": true,
+        "text_alignment": "left",
+        "add_padding_top": true
+      }
+    },
+    "1629135549159c3cc4": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Update your collection with one of our best sellers",
+        "title_style": "h3",
+        "collection": "all-products",
+        "products_to_show": 4,
+        "products_offset": 0,
+        "show_view_all": false,
+        "swipe_on_desktop": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_vendor": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "162913543808a84373",
+    "1629135549159c3cc4"
   ]
 }

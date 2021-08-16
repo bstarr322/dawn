@@ -6,13 +6,15 @@
         "ddccf559-3b12-4cca-b23c-4edfef945dc5": {
           "type": "sub_heading",
           "settings": {
-            "sub_heading": "Exclusive Edition"
+            "sub_heading": "Exclusive Edition",
+            "subheading_style": "caption"
           }
         },
         "16258335436eb94c3b-0": {
           "type": "heading",
           "settings": {
-            "heading": "The Lorna Simpson Edition"
+            "heading": "The Lorna Simpson Edition",
+            "heading_style": "h5"
           }
         },
         "16258335436eb94c3b-1": {
@@ -28,27 +30,21 @@
             "button_link": "shopify:\/\/collections\/best-sellers",
             "button_type": "secondary"
           }
-        },
-        "c9e215d6-c6dd-4d42-a705-dd183a43a83f": {
-          "type": "price",
-          "settings": {
-            "price": "$10"
-          }
         }
       },
       "block_order": [
         "ddccf559-3b12-4cca-b23c-4edfef945dc5",
         "16258335436eb94c3b-0",
         "16258335436eb94c3b-1",
-        "16258335436eb94c3b-2",
-        "c9e215d6-c6dd-4d42-a705-dd183a43a83f"
+        "16258335436eb94c3b-2"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/hero.jpg",
         "height": "adapt",
         "color_scheme": "background-1",
         "layout": "text_first",
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "left"
       }
     },
     "featured_products": {
@@ -73,13 +69,15 @@
         "abaa57e9-a6a8-4fd5-8a31-b2a8fa771cfc": {
           "type": "sub_heading",
           "settings": {
-            "sub_heading": "Books"
+            "sub_heading": "Books",
+            "subheading_style": "caption"
           }
         },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Marcel Duchamp"
+            "heading": "Marcel Duchamp",
+            "heading_style": "h5"
           }
         },
         "text": {
@@ -115,7 +113,8 @@
         "height": "adapt",
         "color_scheme": "background-1",
         "layout": "text_first",
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "left"
       }
     },
     "16258335670345979c": {
@@ -178,7 +177,8 @@
         "16269597045d64ab9d-0": {
           "type": "heading",
           "settings": {
-            "heading": "H & W Blanket Series"
+            "heading": "H & W Blanket Series",
+            "heading_style": "h5"
           }
         },
         "16269597045d64ab9d-1": {
@@ -206,7 +206,8 @@
         "height": "adapt",
         "color_scheme": "background-1",
         "layout": "text_first",
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "left"
       }
     },
     "162695979530ada741": {
@@ -255,6 +256,9 @@
           "type": "video",
           "settings": {
             "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "sub_heading": "Sub Heading",
+            "heading": "Image with text",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "description": "Describe the video for customers using screen readers",
             "image_padding": false
           }

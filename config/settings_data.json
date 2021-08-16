@@ -16,6 +16,7 @@
     "social_tumblr_link": "",
     "social_snapchat_link": "",
     "social_vimeo_link": "",
+    "login_image": "shopify:\/\/shop_images\/hero.jpg",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -40,15 +41,13 @@
           "1c9e718c-5d73-4365-bb36-fa68e1399136": {
             "type": "mega_menu",
             "settings": {
-              "navigation_mega_menu": "Accessories",
+              "navigation_mega_menu": "",
               "show_menu_title": false,
               "push_1_image": "shopify:\/\/shop_images\/image-blankets.jpg",
               "push_1_heading": "Pillows",
-              "push_1_button_label": "",
               "push_1_url": "shopify:\/\/collections",
               "push_2_image": "shopify:\/\/shop_images\/image-artists.jpg",
               "push_2_heading": "Scarves",
-              "push_2_button_label": "",
               "push_2_url": "shopify:\/\/collections"
             }
           }
